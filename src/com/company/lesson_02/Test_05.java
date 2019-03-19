@@ -11,6 +11,7 @@ public class Test_05 {
     public static void main(String[] arg) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 
+
         System.out.println("Введите число1");
         String st = buf.readLine();
         int number = Integer.parseInt(st);
