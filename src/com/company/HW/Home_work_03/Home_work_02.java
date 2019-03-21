@@ -8,8 +8,9 @@ import java.io.InputStreamReader;
 //Метод должен выводить строку на экран "Число меньше 5",
 // если параметр метода меньше 5 - и, выводить строку "Число больше 5", если параметр
 // метода больше 5 - и, и выводить строку "Число равно 5", если параметр метода равен 5 - и.
-public class Home_work_02 {
-    public static void main(String[] args) {
+public class Home_work_02{
+    public static void main(String[] args)  throws IOException {
+       compare();
     }
 
     public static void compare() throws IOException {
