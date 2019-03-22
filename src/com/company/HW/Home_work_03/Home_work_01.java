@@ -27,9 +27,9 @@ public class Home_work_01 {
 
         if (number > number2 && number2 > number3) {
             System.out.println(number3 + " " + number2 + " " + number);
-        } else if (number2 > number && number < number3) { // TODO: 21.03.2019
-            System.out.println(number + " " + number3 + " " + number2);
-        } else if (number3 > number && number < number2) {
+        } else if (number2 > number && number > number3) {
+            System.out.println(number3 + " " + number + " " + number2);
+        } else if (number3 > number && number2 > number) {
             System.out.println(number3 + " " + number2 + " " + number);
         }
 
