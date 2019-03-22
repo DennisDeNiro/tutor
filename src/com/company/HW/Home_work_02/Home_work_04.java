@@ -22,7 +22,6 @@ public class Home_work_04
         System.out.println("Третье число");
         String st3 = bf.readLine();
         int c = Integer.parseInt(st3);
-        // TODO: 19.03.2019  check hw
         if (a > b && a < c) {           //2 1 3                     1 2 3, 1 3 2,2 1 3, 2 3 1,3 2 1, 3 1 2
             System.out.println(a);
         } else if (b > a && b < c) {   // 1 2 3
