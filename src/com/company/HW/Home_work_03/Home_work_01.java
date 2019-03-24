@@ -24,7 +24,7 @@ public class Home_work_01 {
         System.out.println("Введите третье число");
         String st3 = bf.readLine();
         int number3 = Integer.parseInt(st3);
-
+        // TODO: 24.03.2019  
         if (number > number2 && number2 > number3) {
             System.out.println(number3 + " " + number2 + " " + number);  //3 2 1
         } else if (number > number2 && number2 < number3) {

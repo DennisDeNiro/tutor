@@ -19,7 +19,7 @@ public class Test_03 {
 //        int s = Integer.parseInt("Text");
         System.out.println("convert = " + convert(number));
         System.out.println("percent = " + percent(number));
-//        System.out.println("print = +" + print(s);
+//        System.out.println("print = +" + print();
 
     }
 
