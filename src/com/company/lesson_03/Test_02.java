@@ -13,6 +13,9 @@ public class Test_02
         System.out.println("Enter number2:");
         int number2 = Integer.parseInt(bf.readLine());
         System.out.println("sum = " + plus(number1, number2));
+        System.out.println("minus = " + minus(number1, number2));
+        System.out.println("multiply = " + multiply(number1, number2));
+        System.out.println("split = " + split(number1, number2));
 //        System.out.println(minus(21,34));
 //        System.out.println(umnojit(34,2));
 //        System.out.println(delit(8,4));
@@ -26,11 +29,11 @@ public class Test_02
         return number1 - number2;
     }
 
-    public static int umnojit(int number1, int number2){
+    public static int multiply(int number1, int number2){
         return number1 * number2;
     }
 
-    public static int delit(int number1, int number2){
+    public static int split(int number1, int number2){
         return number1 / number2;
     }
 
