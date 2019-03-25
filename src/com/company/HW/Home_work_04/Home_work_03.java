@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Home_work_03
-{
+{//почему работает только с float
     public static void main(String[] args) throws IOException {
         float a = input();
         float b = input();
