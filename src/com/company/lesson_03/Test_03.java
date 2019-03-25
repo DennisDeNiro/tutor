@@ -19,12 +19,11 @@ public class Test_03 {
 //        int s = Integer.parseInt("Text");
         System.out.println("convert = " + convert(number));
         System.out.println("percent = " + percent(number));
-//        System.out.println("print = +" + print();
-
+        System.out.println("print = " + print(""+number));
     }
 
     public static double convert(double grivna) {
-        return grivna/27.3;
+        return grivna/27.3; //BigDecimal
     }
 
     public static double percent(double number){
@@ -32,7 +31,7 @@ public class Test_03 {
     }
 
     // TODO: 24.03.2019
-    public static void print(int s){
+    public static void print(String s){
         System.out.println(s);
         System.out.println(s);
         System.out.println(s);
