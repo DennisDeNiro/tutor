@@ -24,7 +24,9 @@ public class Home_work_03
 
     static float closeToTen(float a, float b) {
         float a1 = Math.abs(a - 10);
+        System.out.println(a1);
         float b2 = Math.abs(b - 10);
+        System.out.println(b2);
         if (a1 == b2) return Float.NaN;
         return a1 < b2 ? a1 : b2;
     }

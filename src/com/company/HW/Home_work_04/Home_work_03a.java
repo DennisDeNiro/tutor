@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Этот кад не работает!!
+//Этот код не работает!!
 
 
 public class Home_work_03a {
@@ -20,14 +20,14 @@ public class Home_work_03a {
         return num;
     }
 
-     static int CloseToTen(int a, int b) {
+    public static void CloseToTen(int a, int b) {
         int x = a - 10;
         int y = b - 10;
         if (abs(x) < abs(y))
             System.out.println("первое число ближе к 10");
-         else if(abs(x) > abs(y))
-        System.out.println("второе число ближе к 10");
-         else
+        else if (abs(x) > abs(y))
+            System.out.println("второе число ближе к 10");
+        else
             System.out.println("Числа одинаковые");
     }
 
