@@ -20,13 +20,13 @@ public class Test_06 {
         int number = Integer.parseInt(st);
         int number2 = Integer.parseInt(st2);
 
-        int  m = 0;
+        int m = 0;
         int n = 0;
-        for (m = 0; m <=number ; m++) {
-            for (n = 0; n <=number2 ; n++){
-                System.out.print("8888");
+        for (m = 0; m < number; m++) {
+            for (n = 0; n < number2; n++) {
+                System.out.print("8");
             }
-            System.out.println("8888");
+            System.out.println("8");
         }
     }
 }
