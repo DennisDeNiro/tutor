@@ -14,16 +14,19 @@ import java.io.InputStreamReader;
 public class Test_06 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bf2 = new BufferedReader(new InputStreamReader(System.in));
         String st = bf.readLine();
-        String st2 = bf.readLine();
-        int m = Integer.parseInt(st);
-        int n = Integer.parseInt(st2);
+        String st2 = bf2.readLine();
+        int number = Integer.parseInt(st);
+        int number2 = Integer.parseInt(st2);
 
-        for (m = 0; m <= 2; m++) {
-            for (n = 0; n <= 4; n++){
+        int  m = 0;
+        int n = 0;
+        for (m = 0; m <=number ; m++) {
+            for (n = 0; n <=number2 ; n++){
                 System.out.print("8888");
             }
-            System.out.println("9999");
+            System.out.println("8888");
         }
     }
 }
