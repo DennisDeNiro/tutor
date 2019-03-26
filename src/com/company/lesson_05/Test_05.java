@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 public class Test_05 {
     public static void main(String[] args) throws IOException {
         int a = input();
+        System.out.println(input());
 
     }
 
@@ -24,8 +25,6 @@ public class Test_05 {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String st = bf.readLine();
         int number = Integer.parseInt(st);
-        String st2 = bf.readLine();
-
         return number;
     }
 
