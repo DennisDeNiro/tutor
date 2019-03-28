@@ -25,8 +25,9 @@ public class Home_work_04 {
         if (num < 0) {
             num = -num;
             System.out.println(num2 - num);
-        }if (num2 <0){
-            num2= - num2;
+        }
+        if (num2 < 0) {
+            num2 = -num2;
             System.out.println(num - num2);
         }
     }
