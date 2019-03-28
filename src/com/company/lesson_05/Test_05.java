@@ -14,26 +14,22 @@ import java.io.InputStreamReader;
 абв
 абв
 */
+// TODO: 28.03.2019  
 public class Test_05 {
     public static void main(String[] args) throws IOException {
-
-        String = input();
-
-        System.out.println(input());
-
-
-    }
-
-    public static String input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        String st = bf.readLine();
-//        int number = Integer.parseInt(st);
-       String name = br.readLine();
-        return name;
+        BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите буквы");
+        String name = br.readLine();
+        String st = br2.readLine();
+        int number = Integer.parseInt(st);
+        System.out.println(name);
+        int j = 0;
+//        while (number > name){
+//            System.out.println(name);
+//            number++;
+//        }
     }
-
-
 }
 
-
+//этот код не работает
