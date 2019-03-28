@@ -16,22 +16,24 @@ import java.io.InputStreamReader;
 */
 public class Test_05 {
     public static void main(String[] args) throws IOException {
-        int a = input();
+
+        String = input();
+
         System.out.println(input());
 
+
     }
 
-    public static int input() throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String st = bf.readLine();
-        int number = Integer.parseInt(st);
-        return number;
+    public static String input() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        String st = bf.readLine();
+//        int number = Integer.parseInt(st);
+       String name = br.readLine();
+        return name;
     }
 
-    public static String a(String N) {
-        System.out.println(N);
-        return N;
-    }
+
 }
 
 
