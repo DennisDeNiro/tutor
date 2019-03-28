@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import static com.sun.tools.doclint.Entity.minus;
-
 /*
  * 1) Пользователь вводит число от 1 до 4
  * 2) Если число не входит в диапазон от 1 до 4 - выводим сообщение "Неверное число!"
@@ -22,23 +20,38 @@ public class Test_01 {
         System.out.println("Число 1");
         String st1 = bf.readLine();
         int number = Integer.parseInt(st1);
-        System.out.println("Число 2");
-        String st2 = bf.readLine();
-        int number2 = Integer.parseInt(st2);
 
-        if (number < 1 && number2 > 4) {
+        if (number<1 && number>4) {
             System.out.println("Неверное число!");
-        } else if (number == 1 && number2==1) {
-            System.out.println(minus(number2,number));
-        } else if (number == 2 && number2==2){
-            System.out.println(sum(number, number2));
-        } else if (number == 3 && number2==3){
-            System.out.println(mylty(number, number2));
-        }else if(number == 4 && number2==4){
-            System.out.println(div(number, number2));
+        } else if (number == 1) {
+            System.out.println("Введите второе число");
+            String st2 = bf.readLine();
+            int number2 = Integer.parseInt(st2);
+            System.out.println(minus(number,number2));
+        } else if (number == 2){
+            System.out.println("Введите второе число");
+            String st2 = bf.readLine();
+            int number2 = Integer.parseInt(st2);
+            System.out.println(sum(number,number2));
+        } else if (number == 3){
+            System.out.println("Введите второе число");
+            String st2 = bf.readLine();
+            int number2 = Integer.parseInt(st2);
+            System.out.println(mylty(number,number2));
+        }else if(number == 4){
+            System.out.println("Введите второе число");
+            String st2 = bf.readLine();
+            int number2 = Integer.parseInt(st2);
+            System.out.println(div(number,number2));
         }
     }
 
+//    public static int input() throws IOException {
+//        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+//        String st = bf.readLine();
+//        int number2 = Integer.parseInt(st);
+//        return number2;
+//    }
 
     public static int minus(int number, int number2) {
         return number2 - number;
