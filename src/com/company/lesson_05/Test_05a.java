@@ -14,25 +14,20 @@ import java.io.InputStreamReader;
 абв
 абв
 */
-// TODO: 28.03.2019  
-public class Test_05 {
+public class Test_05a
+{
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите число");
-        String st = br2.readLine();
         System.out.println("Введите буквы");
         String name = br.readLine();
+        System.out.println("Введите число");
+        String st = br.readLine();
         int number = Integer.parseInt(st);
         int a = 0;
-        while (a < number){
+        while (a < number)
+        {
             System.out.println(name);
-            number = number + 1;
+           a++;
         }
     }
 }
-
-//ошыбка в последовательности
-
-//этот код не работает
-//цыкл бесконечный

@@ -17,3 +17,5 @@ public class Home_work_01a {
     }
 
 }
+
+// не понимаю этот код
