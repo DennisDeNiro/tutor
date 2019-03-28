@@ -21,7 +21,7 @@ public class Test_01 {
         String st1 = bf.readLine();
         int number = Integer.parseInt(st1);
 
-        if (number < 1 || number > 4) {
+        if (number < 1 || number > 5) {
             System.out.println("Неверное число!");
         } else if (number == 1) {
             System.out.println("Введите второе число");
@@ -53,13 +53,6 @@ public class Test_01 {
             System.out.println(div(number2, number3));
         }
     }
-
-//    public static int input() throws IOException {
-//        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-//        String st = bf.readLine();
-//        int number2 = Integer.parseInt(st);
-//        return number2;
-//    }
 
     public static int minus(int number, int number2) {
         return number2 - number;
