@@ -10,10 +10,9 @@ package com.company.HW.Home_work_05_FOR_EACH;
 public class Home_work_01 {
     public static void main(String[] args) {
         int k = 0;
-        int x= 0;
-        while (k <= 10) {
-            System.out.print("S");
-            k = k + 1;
+        while (k < 10) {
+            System.out.println("SSSSSSSSS");
+            k = k + 1; // k++;
         }
 
     }

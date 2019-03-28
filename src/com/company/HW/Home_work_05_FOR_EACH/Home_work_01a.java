@@ -10,8 +10,9 @@ public class Home_work_01a {
         int i = 0;
         while (i++ < 10) {
             int j = 0;
-            while (j++ < 10)
+            while (j++ < 10) {
                 System.out.print("S");
+            }
             System.out.println();
         }
     }
