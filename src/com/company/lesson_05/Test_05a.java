@@ -14,8 +14,7 @@ import java.io.InputStreamReader;
 абв
 абв
 */
-public class Test_05a
-{
+public class Test_05a {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите буквы");
@@ -24,10 +23,9 @@ public class Test_05a
         String st = br.readLine();
         int number = Integer.parseInt(st);
         int a = 0;
-        while (a < number)
-        {
+        while (a < number) {
             System.out.println(name);
-           a++;
+            a++;
         }
     }
 }
