@@ -21,28 +21,36 @@ public class Test_01 {
         String st1 = bf.readLine();
         int number = Integer.parseInt(st1);
 
-        if (number < 1 && number > 4) {
+        if (number < 1 || number > 4) {
             System.out.println("Неверное число!");
         } else if (number == 1) {
             System.out.println("Введите второе число");
+            String st = bf.readLine();
             String st2 = bf.readLine();
-            int number2 = Integer.parseInt(st2);
-            System.out.println(minus(number, number2));
+            int number2 = Integer.parseInt(st);
+            int number3 = Integer.parseInt(st2);
+            System.out.println(minus(number3, number2));
         } else if (number == 2) {
             System.out.println("Введите второе число");
+            String st = bf.readLine();
             String st2 = bf.readLine();
-            int number2 = Integer.parseInt(st2);
-            System.out.println(sum(number, number2));
+            int number2 = Integer.parseInt(st);
+            int number3 = Integer.parseInt(st2);
+            System.out.println(sum(number2, number3));
         } else if (number == 3) {
             System.out.println("Введите второе число");
+            String st = bf.readLine();
             String st2 = bf.readLine();
-            int number2 = Integer.parseInt(st2);
-            System.out.println(mylty(number, number2));
+            int number2 = Integer.parseInt(st);
+            int number3 = Integer.parseInt(st2);
+            System.out.println(mylty(number2, number3));
         } else if (number == 4) {
             System.out.println("Введите второе число");
+            String st = bf.readLine();
             String st2 = bf.readLine();
-            int number2 = Integer.parseInt(st2);
-            System.out.println(div(number, number2));
+            int number2 = Integer.parseInt(st);
+            int number3 = Integer.parseInt(st2);
+            System.out.println(div(number2, number3));
         }
     }
 
