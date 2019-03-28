@@ -21,28 +21,28 @@ public class Test_01 {
         String st1 = bf.readLine();
         int number = Integer.parseInt(st1);
 
-        if (number<1 && number>4) {
+        if (number < 1 && number > 4) {
             System.out.println("Неверное число!");
         } else if (number == 1) {
             System.out.println("Введите второе число");
             String st2 = bf.readLine();
             int number2 = Integer.parseInt(st2);
-            System.out.println(minus(number,number2));
-        } else if (number == 2){
+            System.out.println(minus(number, number2));
+        } else if (number == 2) {
             System.out.println("Введите второе число");
             String st2 = bf.readLine();
             int number2 = Integer.parseInt(st2);
-            System.out.println(sum(number,number2));
-        } else if (number == 3){
+            System.out.println(sum(number, number2));
+        } else if (number == 3) {
             System.out.println("Введите второе число");
             String st2 = bf.readLine();
             int number2 = Integer.parseInt(st2);
-            System.out.println(mylty(number,number2));
-        }else if(number == 4){
+            System.out.println(mylty(number, number2));
+        } else if (number == 4) {
             System.out.println("Введите второе число");
             String st2 = bf.readLine();
             int number2 = Integer.parseInt(st2);
-            System.out.println(div(number,number2));
+            System.out.println(div(number, number2));
         }
     }
 
@@ -57,13 +57,15 @@ public class Test_01 {
         return number2 - number;
     }
 
-    public static int sum (int number, int number2){
+    public static int sum(int number, int number2) {
         return number + number2;
     }
-    public static int mylty(int number, int number2){
-        return number*number2;
+
+    public static int mylty(int number, int number2) {
+        return number * number2;
     }
-    public static int div(int number, int number2){
-        return number/number2;
+
+    public static int div(int number, int number2) {
+        return number / number2;
     }
 }
