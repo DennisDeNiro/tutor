@@ -28,13 +28,13 @@ public class Test_01 {
 
         if (number < 1 && number2 > 4) {
             System.out.println("Неверное число!");
-        } else if (number == 1 && ) {
+        } else if (number == 1 && number2==1) {
             System.out.println(minus(number2,number));
-        } else if (number == 2){
+        } else if (number == 2 && number2==2){
             System.out.println(sum(number, number2));
-        } else if (number == 3){
+        } else if (number == 3 && number2==3){
             System.out.println(mylty(number, number2));
-        }else if(number == 4){
+        }else if(number == 4 && number2==4){
             System.out.println(div(number, number2));
         }
     }
