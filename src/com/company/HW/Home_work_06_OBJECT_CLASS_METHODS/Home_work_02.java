@@ -10,8 +10,8 @@ public class Home_work_02 {
         dog.setOwner("Woman");
         fish.setOwner("Woman");
         System.out.println("Хозяин кошки = " + cat.getOwner());
-        System.out.println("Хозяин собаки = " + cat.getOwner());
-        System.out.println("Хозяин рыбки = " + cat.getOwner());
+        System.out.println("Хозяин собаки = " + dog.getOwner());
+        System.out.println("Хозяин рыбки = " + fish.getOwner());
     }
 }
 
