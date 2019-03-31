@@ -9,9 +9,9 @@ public class Home_work_02 {
         cat.setOwner("Woman");
         dog.setOwner("Woman");
         fish.setOwner("Woman");
-        System.out.println("Хозяин кошки = " +cat.getOwner());
-        System.out.println("Хозяин собаки = " +cat.getOwner());
-        System.out.println("Хозяин рыбки = " +cat.getOwner());
+        System.out.println("Хозяин кошки = " + cat.getOwner());
+        System.out.println("Хозяин собаки = " + cat.getOwner());
+        System.out.println("Хозяин рыбки = " + cat.getOwner());
     }
 }
 
@@ -48,6 +48,7 @@ class Cat1 {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
 }
 
 
