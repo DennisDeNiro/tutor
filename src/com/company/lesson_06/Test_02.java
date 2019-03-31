@@ -18,9 +18,6 @@ class Cat{
     private int age;
     private int power;
 
-    public Cat(){
-
-    }
 
     public Cat(String name, int a, int power){
         this.name=name;
