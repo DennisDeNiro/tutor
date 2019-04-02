@@ -10,14 +10,11 @@ package com.company.lesson_07;
 */
 public class Test_01 {
     public static void main(String[] args) {
-
-        for (int i = 1; i <= 10; i++) {
-            for (int k = 1; k < i; i=++)
-            {
-                System.out.println("T");
+        for (int i = 1; i <= 10; i++){
+            for (int k = 0; k < i; k++){
+                System.out.print("T");
             }
-            System.out.println(" ");
+            System.out.println();
         }
-
     }
 }
