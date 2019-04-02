@@ -13,8 +13,8 @@ public class Test_02
     public static void main(String[] args) {
         Cat cat1 = new Cat("Aim",2,22);
         Cat cat2 = new Cat("Tim",2,30);
-        System.out.println(cat1.setFight(cat2));
-
+        System.out.println(cat1.setFight(cat2)+ "\n" + "Tim победил Aim");
+        System.out.println(cat2.setFight(cat1)+ "\n" + "Aim проиграл Tim");
     }
 
 }
