@@ -2,28 +2,51 @@ package com.company.HW.Home_work_06_OBJECT_CLASS_METHODS;
 
 public class Home_work_02 {
     public static void main(String[] args) {
-        Woman owner = new Woman();
-        Cat1 cat = new Cat1();
-        Dog1 dog = new Dog1();
-        Fish fish = new Fish();
-        cat.setOwner("Woman");
-        dog.setOwner("Woman");
-        fish.setOwner("Woman");
-        System.out.println("Хозяин кошки = " + cat.getOwner());
-        System.out.println("Хозяин собаки = " + dog.getOwner());
-        System.out.println("Хозяин рыбки = " + fish.getOwner());
+        Woman woman = new Woman("Anna", 28);
+        Cat1 cat = new Cat1("Dusia", 7, "Woman");
+        Dog1 dog = new Dog1("Aik", 5, "Woman");
+        Fish fish = new Fish("Bity", 2, "Woman");
+        System.out.println(" Хозиян кошки : " + cat.getOwner() +"\n"+ " Хозиян собаки : " + dog.getOwner()+"\n" + " Хозиян рыбки : " + fish.getOwner());
+        System.out.format("Хозяин кошки is %s\n Хозяин собаки is %s\n Хозяин рыбки is %s\n", cat.getOwner(),dog.getOwner(),fish.getOwner());
     }
 }
 
 class Woman {
-    String name;
-    double age;
+    private String name;
+    private int age;
+
+    public Woman(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
 
 class Cat1 {
-    String name;
-    double age;
-    String owner;
+    private String name;
+    private double age;
+    private String owner;
+
+    public Cat1(String name, double age, String owner) {
+        this.name = name;
+        this.age = age;
+        this.owner = owner;
+    }
 
     public String getName() {
         return name;
@@ -48,14 +71,19 @@ class Cat1 {
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
 }
 
 
 class Dog1 {
-    String name;
-    double age;
-    String owner;
+    private String name;
+    private double age;
+    private String owner;
+
+    public Dog1(String name, double age, String owner) {
+        this.name = name;
+        this.age = age;
+        this.owner = owner;
+    }
 
     public String getName() {
         return name;
@@ -83,15 +111,21 @@ class Dog1 {
 }
 
 class Fish {
-    String name;
-    double age;
-    String owner;
+    private String name;
+    private double age;
+    private String owner;
+
+    public Fish(String name, double age, String owner) {
+        this.name = name;
+        this.age = age;
+        this.owner = owner;
+    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName() {
         this.name = name;
     }
 
@@ -99,7 +133,7 @@ class Fish {
         return age;
     }
 
-    public void setAge(double age) {
+    public void setAge() {
         this.age = age;
     }
 
@@ -107,7 +141,7 @@ class Fish {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner() {
         this.owner = owner;
     }
 }
