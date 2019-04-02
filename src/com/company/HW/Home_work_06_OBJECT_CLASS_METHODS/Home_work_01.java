@@ -2,49 +2,48 @@ package com.company.HW.Home_work_06_OBJECT_CLASS_METHODS;
 
 public class Home_work_01 {
     public static void main(String[] args) {
-        Dog dog1 = new Dog();                //2)создать два обьекта и (инициализировать из поля?)
-        dog1.name = "Rokki";
-        dog1.age = 2.2f;
-        dog1.tailLenght = 32;
-        Dog dog2 = new Dog();
-        dog2.name = "Ketti";
-        dog2.age = 7.5f;
-        dog2.tailLenght = 15;
+        Dog dog1 = new Dog("Rokki", 2, 68);                //2)создать два обьекта и (инициализировать из поля?)
+        Dog dog2 = new Dog("Ketti", 7, 38);
         System.out.println("\033[35m Первая собака");
-        System.out.println(" Name: " + dog1.name + '\n' + " age: " + dog1.age + '\n' + " Strong: " + dog1.tailLenght);
-        System.out.println("Вторая собака");
-        System.out.println(" Name: " + dog2.name + '\n' + " age: " + dog2.age + '\n' + " Strong: " + dog2.tailLenght);
-//        System.out.format("Name is %s, age = %f, strong = %d\n", dog2.getName(), dog2.getAge(), dog2.getTailLenght()); // как добавить \n
+        System.out.format("Name: = %s, age: %d, tail length: %d", dog1.getName(), dog1.getAge(), dog1.getTailLenght());
+        System.out.println("\n" + "Вторая собака");
+        System.out.format("Name: = %s, age: %d, tail length: %d", dog2.getName(), dog2.getAge(), dog2.getTailLenght());
     }
 }
 
 class Dog {
-    String name;        //1) создать клас Dog с параметрами
-    float age;
-    int tailLenght;
+    private String name;        //1) создать клас Dog с параметрами
+    private int age;
+    private int tailLenght;
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public float getAge() {
-//        return age;
-//    }
-//
-//    public void setAge(float age) {
-//        this.age = age;
-//    }
-//
-//    public int getTailLenght() {
-//        return tailLenght;
-//    }
-//
-//    public void setTailLenght(int tailLenght) {
-//        this.tailLenght = tailLenght;
-//    }
+    public Dog(String name, int age, int tailLenght) {
+        this.name = name;
+        this.age = age;
+        this.tailLenght = tailLenght;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getTailLenght() {
+        return tailLenght;
+    }
+
+    public void setTailLenght() {
+        this.tailLenght = tailLenght;
+    }
 }
 
