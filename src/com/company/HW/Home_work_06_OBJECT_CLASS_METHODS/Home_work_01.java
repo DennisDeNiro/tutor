@@ -8,7 +8,7 @@ public class Home_work_01 {
         Dog dog1 = new Dog("Rokki", 2, 68);                //2)создать два обьекта и (инициализировать из поля?)
         Dog dog2 = new Dog("Ketti", 7, 38);
         System.out.println("\033[35m Первая собака");
-        System.out.format("Name: = %s, age: %d, tail length: %d", dog1.getName(), dog1.getAge(), dog1.getTailLenght());
+        System.err.format("Name: = %s, age: %d, tail length: %d", dog1.getName(), dog1.getAge(), dog1.getTailLenght());
         System.out.println("\n" + "Вторая собака");
         System.out.format("Name: = %s, age: %d, tail length: %d", dog2.getName(), dog2.getAge(), dog2.getTailLenght());
 //        System.out.println("Name:"+ [dog.name], age: [dog.age], tail length: [dog.tailLength]);

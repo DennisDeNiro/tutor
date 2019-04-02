@@ -10,11 +10,15 @@ package com.company.HW.Home_work_06_OBJECT_CLASS_METHODS;
 public class Home_work_02 {
     public static void main(String[] args) {
         Woman woman = new Woman("Anna", 28);
-        Cat1 cat = new Cat1("Dusia", 7, "Woman");
+        Woman woman1 = new Woman("Anna", 28);
+        Woman woman2 = new Woman("Anna", 28);
+        Woman woman3 = new Woman("Anna", 28);
+        Woman woman4 = new Woman("Anna", 28);
+        Cat1 cat = new Cat1("Dusia", 7, woman3);
         Dog1 dog = new Dog1("Aik", 5, "Woman");
         Fish fish = new Fish("Bity", 2, "Woman");
-        System.out.println(" Хозиян кошки : " + cat.getOwner() +"\n"+ " Хозиян собаки : " + dog.getOwner()+"\n" + " Хозиян рыбки : " + fish.getOwner());
-        System.out.format("Хозяин кошки is %s\n Хозяин собаки is %s\n Хозяин рыбки is %s\n", cat.getOwner(),dog.getOwner(),fish.getOwner());
+        System.out.println(" Хозиян кошки : " + cat.getOwner().getName() +"\n"+ " Хозиян собаки : " + dog.getOwner()+"\n" + " Хозиян рыбки : " + fish.getOwner());
+        System.out.format("Хозяин кошки is %s\n Хозяин собаки is %s\n Хозяин рыбки is %s\n", cat.getOwner().getName(),dog.getOwner(),fish.getOwner());
     }
 }
 
@@ -47,9 +51,9 @@ class Woman {
 class Cat1 {
     private String name;
     private double age;
-    private String owner;
+    private Woman owner;
 
-    public Cat1(String name, double age, String owner) {
+    public Cat1(String name, double age, Woman owner) {
         this.name = name;
         this.age = age;
         this.owner = owner;
@@ -71,11 +75,11 @@ class Cat1 {
         this.age = age;
     }
 
-    public String getOwner() {
+    public Woman getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(Woman owner) {
         this.owner = owner;
     }
 }

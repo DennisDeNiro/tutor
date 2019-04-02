@@ -21,7 +21,7 @@ public class Home_work_04 {
 
         if (num > 0 && num2 > 0) {
             System.out.println(num3);
-        }
+        } // TODO: 02.04.2019 HW
         if (num < 0) {
             num = -num;
             System.out.println(num2 - num);
