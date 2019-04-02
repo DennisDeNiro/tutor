@@ -1,5 +1,8 @@
 package com.company.HW.Home_work_06_OBJECT_CLASS_METHODS;
 
+/* 1) Создать класс Dog с параметрами: name, age, tailLength. Подумай, какого типа должна быть каждая переменная.
+ 2) В выполняющем методе создать два объекта класса Dog и инициализировать их поля
+ 3) Вывести в консоль данные о каждой собаке в виде - "Name: [dog.name], age: [dog.age], tail length: [dog.tailLength]." */
 public class Home_work_01 {
     public static void main(String[] args) {
         Dog dog1 = new Dog("Rokki", 2, 68);                //2)создать два обьекта и (инициализировать из поля?)
