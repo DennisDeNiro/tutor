@@ -8,6 +8,7 @@ public class Home_work_01 {
         System.out.format("Name: = %s, age: %d, tail length: %d", dog1.getName(), dog1.getAge(), dog1.getTailLenght());
         System.out.println("\n" + "Вторая собака");
         System.out.format("Name: = %s, age: %d, tail length: %d", dog2.getName(), dog2.getAge(), dog2.getTailLenght());
+//        System.out.println("Name:"+ [dog.name], age: [dog.age], tail length: [dog.tailLength]);
     }
 }
 
