@@ -13,6 +13,8 @@ public class Test_02
     public static void main(String[] args) {
         Cat cat1 = new Cat("Aim",2,22);
         Cat cat2 = new Cat("Tim",2,30);
+        System.out.println(cat1.setFight(cat2));
+
     }
 
 }
@@ -21,6 +23,7 @@ class Cat{
     private String name;
     private int age;
     private int power;
+    private int fight;
 
 
     public Cat(String name, int age, int power) {
@@ -29,10 +32,14 @@ class Cat{
         this.power = power;
     }
 
+
     public boolean setFight(Cat anotherCat) {
         if (anotherCat.power>this.getPower()){
-
+            return true;
+        }else {
+            return false;
         }
+
     }
 
     public String getName() {
