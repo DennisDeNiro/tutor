@@ -20,12 +20,12 @@ public class Test_01
         Human Father1 = new Human("Taras",false,71);
         Human Mother1 = new Human("Alla",false,70);
 
-        Human human = new Human("Dennis",true,34,Father,Mother);
-        Human wife = new Human("Anna",true,31,Father1,Mother1);
-
-        Human children = new Human("Danil",true,13,human,wife);
-        Human children1 = new Human("Nikita",true,11,human,wife);
-        Human children2 = new Human("Anton",true,14,human,wife);
+//        Human human = new Human("Dennis",true,34,Father,Mother);
+//        Human wife = new Human("Anna",true,31,Father1,Mother1);
+//
+//        Human children = new Human("Danil",true,13,human,wife);
+//        Human children1 = new Human("Nikita",true,11,human,wife);
+//        Human children2 = new Human("Anton",true,14,human,wife);
 
     }
 }
@@ -40,8 +40,8 @@ class Human{
     private String name;
     private boolean manhood;
     private int age;
-    private String Father_human;
-    private String Mother_human1;
+    private String father_human;
+    private String mother_human1;
 
     public Human(String name, boolean manhood, int age) {
         this.name = name;
@@ -53,13 +53,13 @@ class Human{
         this.name = name;
         this.manhood = manhood;
         this.age = age;
-        Father_human = father_human;
-        Mother_human1 = mother_human1;
+        father_human = father_human;
+        mother_human1 = mother_human1;
     }
 
 
     public String toString() {
-        return System.out.print();
+        return null;
     }
 }
 
