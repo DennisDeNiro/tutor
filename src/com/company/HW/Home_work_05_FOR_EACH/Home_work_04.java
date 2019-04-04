@@ -5,30 +5,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /* Посчитать сумму чисел
-Вводить с клавиатуры числа и считать их сумму. Если пользователь ввел -1, вывести на экран сумму и завершить программу.
+Вводить с клавиатуры числа и считать их сумму.
+Если пользователь ввел -1, вывести на экран сумму и завершить программу.
  -1 должно учитываться в сумме.
 */
+
 public class Home_work_04 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите первое число");
+        System.out.println("Введите числа");
         String st = bf.readLine();
-        System.out.println("Введите второе число");
-        String st2 = bf.readLine();
         int num = Integer.parseInt(st);
-        int num2 = Integer.parseInt(st2);
-        int num3 = num + num2;
+        int num1 = Integer.parseInt(st);
+        int num2 = Integer.parseInt(st);
+        int num3 = Integer.parseInt(st);
+        int num4 = Integer.parseInt(st);
+        int num5 = Integer.parseInt(st);
 
-        if (num > 0 && num2 > 0) {
-            System.out.println(num3);
-        } // TODO: 02.04.2019 HW
-        if (num < 0) {
-            num = -num;
-            System.out.println(num2 - num);
-        }
-        if (num2 < 0) {
-            num2 = -num2;
-            System.out.println(num - num2);
-        }
+        int num6 = num + num1 + num2 + num3 + num4;
+
+        if (num==-1 || num1==-1){
+            System.out.println(num+num1);
+        }else if (num2==-1 || num3==-1 ){
+            System.out.println(num+num1+num2+num3);
+        }else if
     }
 }
