@@ -14,18 +14,18 @@ package com.company.lesson_08;
 public class Test_01
 {
     public static void main(String[] args) {
-        Human Father = new Human();
-        Human Mother = new Human();
+        Human Father = new Human("Vasya",false,78);
+        Human Mother = new Human("Olya",false,77);
 
-        Human Father1 = new Human();
-        Human Mother1 = new Human();
+        Human Father1 = new Human("Taras",false,71);
+        Human Mother1 = new Human("Alla",false,70);
 
-        Human human = new Human();
-        Human wife = new Human();
+        Human human = new Human("Dennis",true,34,Father,Mother);
+        Human wife = new Human("Anna",true,31,Father1,Mother1);
 
-        Human children = new Human();
-        Human children1 = new Human();
-        Human children2 = new Human();
+        Human children = new Human("Danil",true,13,human,wife);
+        Human children1 = new Human("Nikita",true,11,human,wife);
+        Human children2 = new Human("Anton",true,14,human,wife);
 
     }
 }
@@ -40,8 +40,8 @@ class Human{
     private String name;
     private boolean manhood;
     private int age;
-    private Father human;
-    private Mother human1;
+    private String Father_human;
+    private String Mother_human1;
 
     public Human(String name, boolean manhood, int age) {
         this.name = name;
@@ -49,12 +49,17 @@ class Human{
         this.age = age;
     }
 
-    public Human(String name, boolean manhood, int age, Father human, Mother human1) {
+    public Human(String name, boolean manhood, int age, String father_human, String mother_human1) {
         this.name = name;
         this.manhood = manhood;
         this.age = age;
-        this.human = human;
-        this.human1 = human1;
+        Father_human = father_human;
+        Mother_human1 = mother_human1;
+    }
+
+
+    public String toString() {
+        return System.out.print();
     }
 }
 
