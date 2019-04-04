@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 абв
 абв
 */
-// TODO: 28.03.2019  
+
 public class Test_05 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

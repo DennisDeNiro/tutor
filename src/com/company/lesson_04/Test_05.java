@@ -47,7 +47,7 @@ public class Test_05 {
 //        String s = bf.readLine();
 //        int number = Integer.parseInt(s);
 //        return number;
-//    }// TODO: 21.03.2019
+//    }
 //
 //    public static void closeToTen(int a, int b) {
 //        int num = 10;
