@@ -11,23 +11,19 @@ import java.io.InputStreamReader;
 */
 
 public class Home_work_04 {
+
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите числа");
-        String st = bf.readLine();
-        int num = Integer.parseInt(st);
-        int num1 = Integer.parseInt(st);
-        int num2 = Integer.parseInt(st);
-        int num3 = Integer.parseInt(st);
-        int num4 = Integer.parseInt(st);
-        int num5 = Integer.parseInt(st);
 
-        int num6 = num + num1 + num2 + num3 + num4;
+       int num;
+       int sum = 0;
 
-        if (num==-1 || num1==-1){
-            System.out.println(num+num1);
-        }else if (num2==-1 || num3==-1 ){
-            System.out.println(num+num1+num2+num3);
-        }else if
+        do{
+            System.out.println("Введите числа");
+            num = Integer.parseInt(bf.readLine());
+            sum+=num; // sum = sum + num;
+        }while (num != -1);
+        System.out.println(sum);
+
     }
 }
