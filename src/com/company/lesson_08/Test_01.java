@@ -14,55 +14,42 @@ package com.company.lesson_08;
 public class Test_01
 {
     public static void main(String[] args) {
-        GrandFather gd = new GrandFather("Vitya",false, 67);
-        GrandFather gd1 = new GrandFather("Zina", false, 69);
+        Human Father = new Human();
+        Human Mother = new Human();
 
-        GrandMother gm = new GrandMother("Oksana",false,62);
-        GrandMother gm1 = new GrandMother("Igor",false,67;
+        Human Father1 = new Human();
+        Human Mother1 = new Human();
 
-        HumanFather hf = new HumanFather("Vlad",true);
-        HumanMother hm = new HumanMother();
+        Human human = new Human();
+        Human wife = new Human();
 
-        Children ch = new Children();
-        Children ch1 = new Children();
-        Children ch2 = new Children();
+        Human children = new Human();
+        Human children1 = new Human();
+        Human children2 = new Human();
+
     }
 }
 
 
-class GrandFather{
-    private String name;
-    private boolean manhood;
-    private int age;
-
-    public GrandFather(String name, boolean manhood, int age) {
-        this.name = name;
-        this.manhood = manhood;
-        this.age = age;
-    }
-}
-
-class GrandMother{
-    private String name;
-    private boolean manhood;
-    private int age;
-
-    public GrandMother(String name, boolean manhood, int age) {
-        this.name = name;
-        this.manhood = manhood;
-        this.age = age;
-    }
-}
 
 
-class HumanFather{
+
+
+
+class Human{
     private String name;
     private boolean manhood;
     private int age;
     private Father human;
     private Mother human1;
 
-    public HumanFather(String name, boolean manhood, int age, Father human, Mother human1) {
+    public Human(String name, boolean manhood, int age) {
+        this.name = name;
+        this.manhood = manhood;
+        this.age = age;
+    }
+
+    public Human(String name, boolean manhood, int age, Father human, Mother human1) {
         this.name = name;
         this.manhood = manhood;
         this.age = age;
@@ -71,34 +58,5 @@ class HumanFather{
     }
 }
 
-class HumanMother{
-    private String name;
-    private boolean manhood;
-    private int age;
-    private Father human;
-    private Mother human1;
 
-    public HumanMother(String name, boolean manhood, int age, Father human, Mother human1) {
-        this.name = name;
-        this.manhood = manhood;
-        this.age = age;
-        this.human = human;
-        this.human1 = human1;
-    }
-}
 
-class Children{
-    private String name;
-    private boolean manhood;
-    private int age;
-    private Father human;
-    private Mother human1;
-
-    public Children(String name, boolean manhood, int age, Father human, Mother human1) {
-        this.name = name;
-        this.manhood = manhood;
-        this.age = age;
-        this.human = human;
-        this.human1 = human1;
-    }
-}
