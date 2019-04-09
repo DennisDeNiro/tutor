@@ -11,31 +11,45 @@ package com.company.lesson_08;
 Имя: Игорь, пол: мужской, возраст: 2, отец: Михаил, мать: Аня
 …
 */
-public class Test_01
-{
+
+//1. Определить правильное написание Human father(что решает правильность заполнения обьектов)
+//        2.метод toString через if
+
+public class Test_01 {
     public static void main(String[] args) {
-        Human fatherhuman = new Human("Vasya",false,78);
-        Human motherhuman = new Human("Olya",false,77);
+        Human fatherhuman = new Human("Vasya", true, 78);
+        Human motherhuman = new Human("Olya", false, 75);
 
-        Human fatherhuman1 = new Human("Oleg",false,77);
-        Human motherhuman1 = new Human("Nastya",false,69);
+        Human fatherhuman1 = new Human("Oleg", true, 77);
+        Human motherhuman1 = new Human("Nastya", false, 69);
 
-        Human father = new Human("Taras",true,71);
-        Human mother = new Human("Alla",true,70);
+        Human father = new Human("Taras", true, 71, fatherhuman, motherhuman);
+        Human mother = new Human("Alla", false, 70, fatherhuman1, motherhuman1);
 
-//        Human child = new Human("Danil",false,23,father,mother);
-//        Human child1 = new Human("Danil",true,23,father,mother);
+        Human child = new Human("Danil", true, 18, father, mother);
+        Human child1 = new Human("Bogdan", true, 21, father, mother);
+        Human child2 = new Human("Anna", false, 23, father, mother);
+
+
+        System.out.println(fatherhuman);
+        System.out.println(fatherhuman1);
+        System.out.println(motherhuman);
+        System.out.println(fatherhuman1);
+        System.out.println(father);
+        System.out.println(mother);
+        System.out.println(child);
+        System.out.println(child1);
+        System.out.println(child2);
 
     }
 }
 
-class Human{
+class Human {
     private String name;
     private boolean sex;
     private int age;
-    private String father;
-    private String mother;
-
+    Human father;
+    Human mother;
 
     public Human(String name, boolean sex, int age) {
         this.name = name;
@@ -43,7 +57,7 @@ class Human{
         this.age = age;
     }
 
-    public Human(String name, boolean sex, int age, String father, String mother) {
+    public Human(String name, boolean sex, int age, Human father, Human mother) {
         this.name = name;
         this.sex = sex;
         this.age = age;
@@ -51,8 +65,59 @@ class Human{
         this.mother = mother;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isSex() {
+        return sex;
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Human getFather() {
+        return father;
+    }
+
+    public void setFather(Human father) {
+        this.father = father;
+    }
+
+    public Human getMother() {
+        return mother;
+    }
+
+    public void setMother(Human mother) {
+        this.mother = mother;
+    }
+
     public String toString() {
-        return null;
+        String res = "";
+        res += "Name: " + getName();
+        res += ", age: " + getAge();
+        res += ", пол: " + (this.sex ? "мужской" : "женский");
+
+        if (this.father != null) {
+            res += ", отец: " + this.father.name;
+        }
+        if (this.mother != null)
+            res += ", мать: " + this.mother.name;
+
+        return res;
     }
 }
 
