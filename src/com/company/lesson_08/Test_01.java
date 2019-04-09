@@ -23,8 +23,8 @@ public class Test_01
         Human father = new Human("Taras",true,71);
         Human mother = new Human("Alla",true,70);
 
-        Human child = new Human("Danil",false,23,father,mother);
-        Human child1 = new Human("Danil",true,23,father,mother);
+//        Human child = new Human("Danil",false,23,father,mother);
+//        Human child1 = new Human("Danil",true,23,father,mother);
 
     }
 }

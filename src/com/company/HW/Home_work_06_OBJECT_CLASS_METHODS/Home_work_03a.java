@@ -10,9 +10,11 @@ package com.company.HW.Home_work_06_OBJECT_CLASS_METHODS;
 */
 public class Home_work_03a {
     public static void main(String[] args) {
-//        Woman2 woman = new Woman("Tanya",23, null);
-//        Man2 man = new Man("Denis", 28, woman1 );
-//        woman.setHusband(man2);
+        Woman2 woman = new Woman2("Tanya",23, null);
+        Man2 man = new Man2("Denis", 28, woman );
+        woman.setHusband(man);
+        System.out.println("Женщина замужем за : "+ man.getWife().getName());
+        System.out.println("Мужчина замудем за : "+ woman.getHusband().getName());
     }
 }
 // TODO: 04.04.2019
@@ -88,3 +90,4 @@ class Man2 {
         this.wife = wife;
     }
 }
+/// ошыбка определена
