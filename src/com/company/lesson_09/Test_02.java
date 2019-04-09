@@ -8,8 +8,8 @@ public class Test_02 {
     public static void main(String[] args) {
         int[] array = new int[10];
 
-        for (int a = 0; a > array.length; a--) {
-            array[a] = a - 1; // array[9] = 8;
+        for (int a = 0; a < array.length; a++) {
+            array[a] = a + 1; // array[9] = 8;
         }
 
         for (int a = 0; a < array.length; a++) {
