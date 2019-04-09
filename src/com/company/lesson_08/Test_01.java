@@ -14,49 +14,42 @@ package com.company.lesson_08;
 public class Test_01
 {
     public static void main(String[] args) {
-        Human Father = new Human("Vasya",false,78);
-        Human Mother = new Human("Olya",false,77);
+        Human fatherhuman = new Human("Vasya",false,78);
+        Human motherhuman = new Human("Olya",false,77);
 
-        Human Father1 = new Human("Taras",false,71);
-        Human Mother1 = new Human("Alla",false,70);
+        Human fatherhuman1 = new Human("Oleg",false,77);
+        Human motherhuman1 = new Human("Nastya",false,69);
 
-//        Human human = new Human("Dennis",true,34,Father,Mother);
-//        Human wife = new Human("Anna",true,31,Father1,Mother1);
-//
-//        Human children = new Human("Danil",true,13,human,wife);
-//        Human children1 = new Human("Nikita",true,11,human,wife);
-//        Human children2 = new Human("Anton",true,14,human,wife);
+        Human father = new Human("Taras",true,71);
+        Human mother = new Human("Alla",true,70);
+
+        Human child = new Human("Danil",false,23,father,mother);
+        Human child1 = new Human("Danil",true,23,father,mother);
 
     }
 }
 
-
-
-
-
-
-
 class Human{
     private String name;
-    private boolean manhood;
+    private boolean sex;
     private int age;
-    private String father_human;
-    private String mother_human1;
+    private String father;
+    private String mother;
 
-    public Human(String name, boolean manhood, int age) {
+
+    public Human(String name, boolean sex, int age) {
         this.name = name;
-        this.manhood = manhood;
+        this.sex = sex;
         this.age = age;
     }
 
-    public Human(String name, boolean manhood, int age, String father_human, String mother_human1) {
+    public Human(String name, boolean sex, int age, String father, String mother) {
         this.name = name;
-        this.manhood = manhood;
+        this.sex = sex;
         this.age = age;
-        father_human = father_human;
-        mother_human1 = mother_human1;
+        this.father = father;
+        this.mother = mother;
     }
-
 
     public String toString() {
         return null;
