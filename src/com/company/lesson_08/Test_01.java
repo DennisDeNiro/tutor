@@ -34,7 +34,7 @@ public class Test_01 {
         System.out.println(fatherhuman);
         System.out.println(fatherhuman1);
         System.out.println(motherhuman);
-        System.out.println(fatherhuman1);
+        System.out.println(motherhuman1);
         System.out.println(father);
         System.out.println(mother);
         System.out.println(child);
