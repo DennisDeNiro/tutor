@@ -13,7 +13,6 @@ public class Test_02 {
         array[0] = 4323;
         System.out.println(array[4]);
         System.out.println(array[0]);
-
         System.out.println("---------------------");
         array[array.length-1] = 4234;
         for (int i = 0; i < array.length; i++) {
