@@ -8,12 +8,12 @@ import java.io.InputStreamReader;
 public class Test_03
 {
     public static void main(String[] args) throws IOException {
-        String[] array = new String[5];
+
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String st = bf.readLine();
-        for (int i = 0; i<array.length; i++){
-
-            array[i] = st + i;
+        String[] array = new String[5];
+        for (int i = 0; i<5; i++){
+            array[i] = bf.readLine();
             System.out.println(array[i]);
         }
     }
