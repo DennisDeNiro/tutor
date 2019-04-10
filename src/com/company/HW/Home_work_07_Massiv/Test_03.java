@@ -10,7 +10,6 @@ public class Test_03
     public static void main(String[] args) throws IOException {
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String st = bf.readLine();
         String[] array = new String[5];
         for (int i = 0; i<5; i++){
             array[i] = bf.readLine();
