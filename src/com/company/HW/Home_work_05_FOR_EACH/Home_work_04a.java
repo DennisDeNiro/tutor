@@ -12,18 +12,18 @@ public class Home_work_04a
 {
     public static void main(String[] args) throws IOException {
         BufferedReader df = new BufferedReader(new InputStreamReader(System.in));
-        int num = Integer.parseInt(df.readLine());
-        int sum = 0;
 
+       int num;
+       int sum = 0;
 
-        if (num > 0) {
-            System.out.println("Введите числа");
+       while (true){
+           num = Integer.parseInt(df.readLine());
+           if(num == -1);
+           sum += num;
+           break;
 
-            sum = num + num;
-        }
-        else (num<=-1){
-            System.out.println(sum);
+       }
+        System.out.println(sum);
 
-        }
     }
 }

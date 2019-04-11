@@ -90,7 +90,7 @@ class Human {
     }
 
     public Human getFather() {
-        return father;
+        return this.father;
     }
 
     public void setFather(Human father) {
@@ -109,7 +109,7 @@ class Human {
         String res = "";
         res += "Name: " + getName();
         res += ", age: " + getAge();
-        res += ", пол: " + (this.sex ? "мужской" : "женский");
+        res += ", пол: " + (isSex() ? "мужской" : "женский");
 
         if (this.father != null) {
             res += ", отец: " + this.father.name;
