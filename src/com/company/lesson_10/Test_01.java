@@ -13,16 +13,13 @@ import java.io.InputStreamReader;
 */
 public class Test_01 {
     public static void main(String[] args) throws IOException {
-        initializeArray();
-
-        System.out.println(max( int[] array));
+        System.out.println(max(initializeArray()));
     }
 
 
     public static int[] initializeArray() throws IOException {
         int[] array = new int[10];
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
         System.out.println("Введите числа");
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(bf.readLine());
@@ -31,11 +28,12 @@ public class Test_01 {
     }
 
 
-
-    public static int max(int[] array) {
-        int max = array[0];
-        if (array[0] > max) {
-            max = array[0];
+    public static int max(int[] arr) {
+        int max = arr[0];
+        for (int i = 0; i<arr.length; i++){
+            if (arr[i]>max){
+                max = arr[i];
+            }
         }
         return max;
     }
