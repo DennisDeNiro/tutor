@@ -13,17 +13,18 @@ import java.io.InputStreamReader;
 */
 public class Test_01 {
     public static void main(String[] args) {
-        System.out.println(max.);
+        System.out.println(max(int[] array));
     }
 
 
-    public static void initializeArray() throws IOException {
+    public static int[] initializeArray() throws IOException {
         int[] array = new int[10];
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int i;
         System.out.println("Введите числа");
         for (i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(bf.readLine());
+            return array;
         }
     }
 
