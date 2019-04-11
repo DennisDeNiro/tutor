@@ -1,6 +1,7 @@
 package com.company.lesson_10;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
@@ -13,19 +14,27 @@ import java.io.InputStreamReader;
 public class Test_01
 {
     public static void main(String[] args) {
-
+        System.out.println(max(int[] array));
     }
 }
 
-class Array{
-    void numberArray(){
+
+public static int initializeArray() throws IOException {
         int[] a = new int[10];
-    }
-
-    void searchArray(){
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i< )
-    }
+        for (int i = 0; i < a.length; i++) ;
+        a[i] = Integer.parseInt(bf.readLine());
+
+
 }
+
+    public static int max(int[] array) {
+        int max = 0;
+        if (a[i]> max){
+            max = a[i];
+        }
+}
+
+
 
 
