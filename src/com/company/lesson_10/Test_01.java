@@ -19,17 +19,19 @@ public class Test_01
 }
 
 
-public static int initializeArray() throws IOException {
-        int[] a = new int[10];
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < a.length; i++) ;
-        a[i] = Integer.parseInt(bf.readLine());
+public static void initializeArray() throws IOException {
+
+    BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    int i;
+    for (i = 0; i < a.length; i++) ;
+    a[i] = Integer.parseInt(bf.readLine());
 
 
 }
 
-    public static int max(int[] array) {
-        int max = 0;
+    public static void max(int[] array) {
+        int[] a = new int[10];
+        int max = a[0];
         if (a[i]> max){
             max = a[i];
         }
