@@ -28,10 +28,11 @@ public class Test_01 {
         }
     }
 
-    public static void max(int[] array) {
+    public static int max(int[] array) {
         int max = array[0];
         if (array[0] > max) {
             max = array[0];
+            return max;
         }
     }
 }
