@@ -12,28 +12,32 @@ import java.io.InputStreamReader;
 3. В выполняющем методе main выведите максимальное число в консоль
 */
 public class Test_01 {
-    public static void main(String[] args) {
-        System.out.println(max(int[] array));
+    public static void main(String[] args) throws IOException {
+        initializeArray();
+
+        System.out.println(max( int[] array));
     }
 
 
     public static int[] initializeArray() throws IOException {
         int[] array = new int[10];
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int i;
+
         System.out.println("Введите числа");
-        for (i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(bf.readLine());
-            return array;
         }
+        return array;
     }
+
+
 
     public static int max(int[] array) {
         int max = array[0];
         if (array[0] > max) {
             max = array[0];
-            return max;
         }
+        return max;
     }
 }
 
