@@ -18,19 +18,19 @@ public class Test_01 {
 
 
     public static int[] initializeArray() throws IOException {
-        int[] array = new int[10];
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int[] array = new int[10];         //создали массив из 10 символов
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in)); // создали BufferedReader
         System.out.println("Введите числа");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = Integer.parseInt(bf.readLine());
+        for (int i = 0; i < array.length; i++) {     // цикл for который перечисляет 10 символов
+            array[i] = Integer.parseInt(bf.readLine());  // присваем всем елементам массива = ввод строки
         }
-        return array;
+        return array;    // возвращаем массив
     }
 
 
-    public static int max(int[] arr) {
-        int max = arr[0];
-        for (int i = 0; i<arr.length; i++){
+    public static int max(int[] arr) {   // создаем метод поиска максимального елемента массива
+        int max = arr[0];                 // пусть максимальный массив будет первым
+        for (int i = 0; i<arr.length; i++){ // цикл for для перечисления массива
             if (arr[i]>max){
                 max = arr[i];
             }

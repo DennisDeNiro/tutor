@@ -11,25 +11,26 @@ import java.io.InputStreamReader;
 В методе printArray():
 3. Вывести содержимое всего массива (10 элементов) на экран в обратном порядке. Каждый элемент - с новой строки.
 */
-public class Test_02
-{
-    public static void main(String[] args) {
-        System.out.println(printArray(initializeArray()));
+public class Test_02 {
+    public static void main(String[] args) throws IOException {
+
+
+        System.out.println(initializeArray(printArray()));
     }
 
-    public static int[] initializeArray() throws IOException {
-        String[]a = new String[10];
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i<8; i++){
-            a[i] = bf.readLine();
+    public static String[] initializeArray() throws IOException {
+        String[] array = new String[10];  // создаем массив из строк на 10 елментов
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in)); // создали bufferreader
+        for (int i = 0; i < 8; i++) { // цикл for принимает восемь елеметов в массив
+            array[i] = bf.readLine();  // каждый елемент последовательно записываеться
         }
-        return String;
+        return array; // возвращаем массив
     }
 
-    public static int printArray(int[] arr){
-        for (int i = 0; i<8; i++){
-            arr[i] = 8-i;
+    public static String printArray(String[] arr) {  // метод вывода елеметов в обратном порядке
+        String array = arr[0];   // принимаем первый елемент массива
+        for (int i = 8; i < 8; i++) {     // цикл for перечисляет восемь елеметов массива
         }
-        return arr[i];
+        return array;
     }
 }
