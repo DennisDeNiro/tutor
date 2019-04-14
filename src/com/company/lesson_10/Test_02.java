@@ -29,7 +29,7 @@ public class Test_02 {
 
     public static String printArray(String[] arr) {  // метод вывода елеметов в обратном порядке
         String array = arr[0];   // принимаем первый елемент массива
-        for (int i = 8; i < 8; i++) {     // цикл for перечисляет восемь елеметов массива
+        for (int i = 0; i < 8; i++) {     // цикл for перечисляет восемь елеметов массива
         }
         return array;
     }
