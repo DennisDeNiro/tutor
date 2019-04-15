@@ -3,6 +3,7 @@ package com.company.lesson_10;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /*
 В методе initializeArray():
@@ -28,9 +29,8 @@ public class Test_02 {
 
     public static void printArray(String[] arr) {  // метод вывода елеметов в обратном порядке
         //        String array = arr[0];   // принимаем первый елемент массива
-        for (int i = 0; i <= arr.length; i++) {     // цикл for перечисляет восемь елеметов массива
+        for (int i = 0; i < arr.length; i++) {     // цикл for перечисляет восемь елеметов массива
+            System.out.println(arr[i]);
         }
-        System.out.println(printArray(arr[i]);
     }
-
 }
