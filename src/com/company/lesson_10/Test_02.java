@@ -13,9 +13,9 @@ import java.io.InputStreamReader;
 */
 public class Test_02 {
     public static void main(String[] args) throws IOException {
-
-
-        System.out.println(initializeArray(printArray()));
+        String[] arr = initializeArray();
+        printArray(arr);
+        System.out.println(arr);
     }
 
     public static String[] initializeArray() throws IOException {
@@ -27,10 +27,10 @@ public class Test_02 {
         return array; // возвращаем массив
     }
 
-    public static String printArray(String[] arr) {  // метод вывода елеметов в обратном порядке
-        String array = arr[0];   // принимаем первый елемент массива
-        for (int i = 0; i < 8; i++) {     // цикл for перечисляет восемь елеметов массива
+    public static void printArray(String[] arr) {  // метод вывода елеметов в обратном порядке
+//        String array = arr[0];   // принимаем первый елемент массива
+        for (int i = 0; i <= arr.length; i++) {     // цикл for перечисляет восемь елеметов массива
         }
-        return array;
     }
+
 }
