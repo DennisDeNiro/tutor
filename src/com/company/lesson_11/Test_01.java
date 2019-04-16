@@ -19,8 +19,8 @@ public class Test_01 {
         for (int i = 0; i < a.length; i++) {  //i =0; i<=5; 0 = 0+1
             a[i] = Integer.parseInt(bf.readLine());
         }
-        for (int i = 0; i < a.length; i++) {// i=5; i<=5; 5= 5-1;
-            a[i] = 5-i;
+        for (int i =a.length-1; i>=0; i--) {// i=5; i<=5; 5= 5-1;
+
             System.out.println(a[i]);
         }
     }
