@@ -26,11 +26,9 @@ public class Test_02 {
             System.out.println(b[i]);
         }
 
-        for (int i = 0; i < c.length; i++) {
-            c[i] = a[i];
+        for (int i = 0; i <= c.length-1; i++) {
+            c[i] = a[i]+5;
             System.out.println(c[i]);
         }
-
-
     }
 }
