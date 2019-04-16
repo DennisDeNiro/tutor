@@ -12,14 +12,15 @@ import java.io.InputStreamReader;
 */
 public class Test_01 {
     public static void main(String[] args) throws IOException {
-        int[] a = new int[5];
+
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String st = bf.readLine();
+        int[] a = new int[5];
 //        int number = Integer.parseInt(st);
-        for (int i = 0; i <= a.length; i++) {
+        for (int i = 0; i < a.length; i++) {  //i =0; i<=5; 0 = 0+1
             a[i] = Integer.parseInt(bf.readLine());
         }
-        for (int i = 0; i >= a.length; i--) {
+        for (int i = 0; i < a.length; i++) {// i=5; i<=5; 5= 5-1;
+            a[i] = 5-i;
             System.out.println(a[i]);
         }
     }
