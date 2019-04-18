@@ -21,10 +21,25 @@ package com.company.lesson_10;
     Garbage collector
 */
 
-public class Test_03
-{
-    int b = 34;
-    public static void main(String[] args) {
-        Test_02 a = new Test_02();
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Test_03 {
+
+    public static void main(String[] args) throws IOException {
+        String[] a = new String[5];
+        int[] i = new int[5];
+
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        for (int q = 0; q < a.length; q++) {
+           a[q] =bf.readLine();
+        }
+        for(int q = 0; q<i.length; q++){
+            i[q] = a.length;
+        }
+        for (int q=0;q<i.length;q++){
+            System.out.println(i[q]);
+        }
     }
 }
