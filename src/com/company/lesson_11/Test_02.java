@@ -21,12 +21,12 @@ public class Test_02 {
         int[] b = new int[5];
         int[] c = new int[5];
 
-        for (int i = 0; i <= b.length; i++) {
+        for (int i = 0; i < b.length; i++) {
             b[i] = a[i];
             System.out.println(b[i]);
         }
 
-        for (int i = a.length; i >= 5; i++) {
+        for (int i = a.length-1; i >= 0; i--) {
             c[i] = a[i];
             System.out.println(c[i]);
         }
