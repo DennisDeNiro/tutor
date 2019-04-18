@@ -33,12 +33,12 @@ public class Test_03 {
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         for (int q = 0; q < a.length; q++) {
-           a[q] =bf.readLine();
+            a[q] = bf.readLine();
         }
-        for(int q = 0; q<i.length; q++){
+        for (int q = 0; q < i.length; q++) {
             i[q] = a.length;
         }
-        for (int q=0;q<i.length;q++){
+        for (int q = 0; q < i.length; q++) {
             System.out.println(i[q]);
         }
     }
