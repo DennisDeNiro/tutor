@@ -20,7 +20,7 @@ public class Test_02a {
         for (int i = 0; i < a.length; i++) {
             a[i] = Integer.parseInt(bf.readLine()); // 10
         }
-
+        // TODO: 21.04.2019  
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }
