@@ -13,24 +13,21 @@ import java.io.InputStreamReader;
 */
 public class Test_02a {
     public static void main(String[] args) throws IOException {
-        System.out.println("Задайте размер массива");
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
-        int[] a = new int[n]; // 11
+        int[] a = new int[11]; // 11
         for (int i = 0; i < a.length; i++) {
             a[i] = Integer.parseInt(bf.readLine()); // 10
         }
-        // TODO: 21.04.2019  
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
-        int[] b = new int[n / 2];
-        for (int i = 0; i < b.length; i++) {
+        int[] b = new int[a.length/2];
+        for (int i =0; i<b.length; i++){
+            b[i] = a[i];
             System.out.println(b[i]);
         }
-        int[] c = new int[n / 2];
-        for (int i = 0; i < c.length; i++) {
+        int[] c = new int[a.length-b.length];
+        for (int i = 0; i<c.length; i++){
+            c[i] = a[i+c.length-1];
             System.out.println(c[i]);
         }
     }
 }
+// TODO: 22.04.2019  // разобраться с последним for
