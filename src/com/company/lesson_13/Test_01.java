@@ -12,14 +12,14 @@ public class Test_01 {
     public static void main(String[] args) {
         int[] x = new int[]{0, 1, 2, 4, 6, 3, 7, 8};
         int q = x[0];
-        for (int i = 0; i < x.length-1; i++) {
-            if (x[0] < x[i+1]) {
-
-            }
-            for (int i = x.length - 1; i > 0; i--){
-                System.out.println(x[i]);
-            }
+        for (int i = 0; i <= x.length; i++) {
+            if(x[i] < x[i] + 1);
+            x[i] =i;
+            System.out.println(x[i]);
         }
     }
 }
 
+// отсортировать массиа чисел
+//  если первый елемент равен второму елементу +1
+//
