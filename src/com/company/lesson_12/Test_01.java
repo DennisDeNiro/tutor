@@ -15,7 +15,6 @@ public class Test_01
         for (int i = 0; i < a.length; i++) {
             a[i] = Integer.parseInt(bf.readLine());
         }
-
         sort(a);
 
         for (int i : a) {
