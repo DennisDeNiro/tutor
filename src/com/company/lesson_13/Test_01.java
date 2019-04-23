@@ -11,11 +11,8 @@ package com.company.lesson_13;
 public class Test_01 {
     public static void main(String[] args) {
         int[] x = new int[]{0, 1, 2, 4, 6, 3, 7, 8};
-        int[] q = new int[]{5};
-        int[] c = new int[x.length + q.length];
-        for (int i = 0; i < c.length - 1; i++) {
-            c[i] = x[i] + q[i];
-            System.out.println(c[i]);
+        for (int i = 0; i < x.length + 1; i++) {
+
         }
     }
 }
