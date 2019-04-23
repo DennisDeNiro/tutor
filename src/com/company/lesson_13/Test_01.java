@@ -11,8 +11,15 @@ package com.company.lesson_13;
 public class Test_01 {
     public static void main(String[] args) {
         int[] x = new int[]{0, 1, 2, 4, 6, 3, 7, 8};
-        for (int i = 0; i < x.length + 1; i++) {
+        int q = x[0];
+        for (int i = 0; i < x.length-1; i++) {
+            if (x[0] < x[i+1]) {
 
+            }
+            for (int i = x.length - 1; i > 0; i--){
+                System.out.println(x[i]);
+            }
         }
     }
 }
+
