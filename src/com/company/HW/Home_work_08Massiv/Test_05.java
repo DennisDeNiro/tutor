@@ -5,17 +5,13 @@ package com.company.HW.Home_work_08Massiv;
 public class Test_05 {
     public static void main(String[] args) {
 
-        initializarray();
+        System.out.println(getMax(initializarray()));
+        System.out.println(getMin(initializarray()));
     }
 
-    public static int initializarray() {
+    public static int[] initializarray() {
         int[] mice = new int[]{4, 9, 3, 22, 5, 18, 25, 7, 11, 15, 5, 19};
-        getMax(mice);
-        return getMax();
-
-        getMin(mice);
-        return getMin();
-
+        return mice;
     }
 
     public static int getMax(int[] arr) {
@@ -31,7 +27,7 @@ public class Test_05 {
         public static int getMin(int[] arr){
             int min = arr[0];
             for (int i = 0; i < arr.length; i++) {
-                if (arr[i] > min) {
+                if (arr[i] < min) {
                     min = arr[i];
                 }
             }
