@@ -15,7 +15,7 @@ public class Test_05 {
 
     public static int getMax(int[] arr){
         int max = arr[0];
-        for (int i=0; i<arr.lenght; i++){
+        for (int i=0; i<arr.length; i++){
             arr[i]> max;
             max = arr[i];
         }
