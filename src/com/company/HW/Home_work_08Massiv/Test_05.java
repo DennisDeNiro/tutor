@@ -4,13 +4,13 @@ package com.company.HW.Home_work_08Massiv;
 // Написать метод getMax(), который вычисляет максимальное значение из массива. Ну и метод getMin() для нахождения минимального значения.
 public class Test_05 {
     public static void main(String[] args) {
-
+        int[] mice = new int[]{4, 9, 3, 22, 5, 18, 25, 7, 11, 15, 5, 19};
         initializarray(getMax());
     }
 
     public static int initializarray(int[] array){
-        int[] mice = new int[]{4, 9, 3, 22, 5, 18, 25, 7, 11, 15, 5, 19};
-        return mice;
+
+
     }
 
     public static int getMax(int[] arr){
