@@ -4,6 +4,7 @@ package com.company.HW.Home_work_08Massiv;
 // Написать метод getMax(), который вычисляет максимальное значение из массива. Ну и метод getMin() для нахождения минимального значения.
 public class Test_05 {
     public static void main(String[] args) {
+
         initializarray();
     }
 
