@@ -22,6 +22,5 @@ public class Test_03SortWhile {
             }
         }
         System.out.println(Arrays.toString(x));
-
     }
 }

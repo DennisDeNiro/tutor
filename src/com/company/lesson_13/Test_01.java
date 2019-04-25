@@ -10,13 +10,12 @@ package com.company.lesson_13;
  */
 public class Test_01 {
     public static void main(String[] args) {
+
+    }
+
+    public static int[] Array(){
         int[] x = new int[]{0, 1, 2, 4, 6, 3, 7, 8};
-        int q = x[0];
-        for (int i = 0; i <= x.length; i++) {
-            if(x[i] < x[i] + 1);
-            x[i] =i;
-            System.out.println(x[i]);
-        }
+        return x;
     }
 }
 
