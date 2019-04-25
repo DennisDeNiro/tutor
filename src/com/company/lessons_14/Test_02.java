@@ -18,15 +18,32 @@ public class Test_02 {
         List<Integer> list = new ArrayList<>();
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         list = Collections.singletonList(Integer.parseInt(bf.readLine()));
-        System.out.println("Введите количество чисел");
-
-        for (int i =0; i<list.size(); i++){
-            if (list == null){
-                return ;
+        int num = 0;
+        int count;
+        do {
+            count = 0;
+            for (int i = 0; i < list.size(); i++) {
+                if (num > 0) ;
+                count++;
+            }
+            while (num < 0) ;
+            System.out.println(list);
+            for (i:list) {
+                System.out.print(num + " ");
             }
         }
-
-        System.out.println(list.get(0));
+//        while (true) {
+//            for (int i = 0; i < list.size(); i++) {
+//                if (num > 0) {
+//                    count++;
+//                }
+//                System.out.println(list.get(i));
+//                if (num < 0) {
+//                    break;
+//                }
+//            }
+//        }
     }
 
 }
+
