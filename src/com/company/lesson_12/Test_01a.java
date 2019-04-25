@@ -8,13 +8,13 @@ import java.util.Arrays;
 public class Test_01a {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int[]x = new int[5];
-        for (int i = 0; i<x.length; i++){
+        int[] x = new int[5];
+        for (int i = 0; i < x.length; i++) {
             x[i] = Integer.parseInt(bf.readLine());
         }
 
         sort(x);
-        for (int i:x){
+        for (int i : x) {
             System.out.println(i);
         }
     }
@@ -22,14 +22,14 @@ public class Test_01a {
     private static void sort(int[] x) {
         boolean isSorted = false;
         int a;
-        while(!isSorted){
-            isSorted =true;
-            for (int i =0; i<x.length-1; i++){
-                if (x[i]<x[i+1]){
-                    isSorted =false;
-                    a =x[i];
-                    x[i] = x[i+1];
-                    x[i+1] =a;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < x.length - 1; i++) {
+                if (x[i] < x[i + 1]) {
+                    isSorted = false;
+                    a = x[i];
+                    x[i] = x[i + 1];
+                    x[i + 1] = a;
                 }
             }
         }
