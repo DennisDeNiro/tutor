@@ -13,7 +13,12 @@ public class Test_03 {
         ArrayList<Integer> list = new ArrayList<Integer>();
         while (true) {
             for (int i = 0; i < list.size(); i++) {
-
+                String s =bf.readLine();
+                if (i%2==0){
+                    list.add(i);
+                }if (i==0){
+                    list.add(0,i);
+                }
             }
         }
     }
