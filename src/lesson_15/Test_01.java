@@ -18,15 +18,14 @@ import java.util.List;
 public class Test_01 {
     public static void main(String[] args) throws IOException {
         printList(list1);
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        printList(list2);
+        printList(list3);
+
         List<String> list = new ArrayList<>();
         List<String> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
         List<String> list3 = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
-            String s = bf.readLine();
-            list.add(s);
-        }
+
         for (int i = 0; i < list.size(); i++) {
             if (i % 3 == 0) {
                 list1.add(list.get(i));
@@ -40,8 +39,11 @@ public class Test_01 {
         }
     }
 
-    public static void printList(List<String> list, List<String> list1, List<String> list2) {
-        for (int i = 0; i < list.size(); i++) {
+    public static void printList(List<String> list) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 8; i++) {
+            String s = bf.readLine();
+            list.add(s);
 
         }
     }
