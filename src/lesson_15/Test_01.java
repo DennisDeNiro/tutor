@@ -30,14 +30,12 @@ public class Test_01 {
         for (int i = 0; i < list.size(); i++) {
             if (i % 3 == 0) {
                 list1.add(list.get(i));
-                list2.add(list.get(i));
             }
             if (i % 2 == 0) {
-                list1.add(list.get(i));
                 list2.add(list.get(i));
             }
             if (i % 2 != 0 && i % 3!= 0){
-                list2.add(list3.get(i));
+                list.add(list3.get(i));
             }
         }
     }
