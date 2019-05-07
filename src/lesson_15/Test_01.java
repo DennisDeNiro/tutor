@@ -35,11 +35,11 @@ public class Test_01 {
                 list3.add(list.get(i));
             }
         }
-        printList(list1);
+        printList(list3);
         System.out.println("-----");
         printList(list2);
         System.out.println("------");
-        printList(list3);
+        printList(list1);
     }
 
     public static void printList(List<String> list) {
