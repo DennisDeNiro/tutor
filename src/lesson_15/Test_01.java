@@ -28,7 +28,10 @@ public class Test_01 {
                 list1.add(list);
             }
             if (i%2==0){
-                list2.add(list);
+                list1.add(list);
+            }
+            if (i==0){
+                list.add(list2);
             }
         }
 
