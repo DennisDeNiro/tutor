@@ -29,10 +29,9 @@ public class Test_01 {
         for (int i = 0; i < list.size(); i++) {
             if (i % 3 == 0) {
                 list1.add(list.get(i));
-            } else if (i % 2 == 0 && i % 3 == 0) {
+            } else if (i % 2 == 0 ) {
                 list2.add(list.get(i));
-                list1.add(list.get(i));
-            } else if (i % 2 != 0 && i % 3 != 0) {
+            } else   (i % 2 != 0 && i % 3 != 0){
                 list3.add(list.get(i));
             }
         }
@@ -43,7 +42,7 @@ public class Test_01 {
 
     public static void printList(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+            System.out.print(list.get(i));
         }
     }
 }
