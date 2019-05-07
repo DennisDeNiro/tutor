@@ -31,10 +31,10 @@ public class Test_01 {
             if (i % 3 == 0) {
                 list1.add(list.get(i));
             }
-            if (i % 2 == 0) {
+            else if (i % 2 == 0) {
                 list2.add(list.get(i));
             }
-            if (i % 2 != 0 && i % 3!= 0){
+            else if (i % 2 != 0 && i % 3!= 0){
                 list.add(list3.get(i));
             }
         }
