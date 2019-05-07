@@ -26,13 +26,13 @@ public class Test_05 {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).length() > max) {
                 max = list.get(i).length();
-                System.out.println(list.get(i));
-
             }
-//            else if (list.get(i).length() == max) {
-//                max = list.get(i).length();
-//                System.out.println(list.get(i));
-//            }
+
+             if (list.get(i).length() == max) {
+                System.out.println(list.get(i));
+            }
         }
+
+
     }
 }
