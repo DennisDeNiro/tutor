@@ -13,6 +13,8 @@ import java.util.List;
 2. Метод printList должен выводить на экран все элементы списка с новой строки.
 3. Используя метод printList выведи эти три списка на экран. Сначала тот, который для x%3, потом тот, который для x%2, потом последний.
 */
+
+//все остальные числа не деляться на два и не деляться на 3
 public class Test_01 {
     public static void main(String[] args) throws IOException {
         printList(list1);
@@ -20,6 +22,7 @@ public class Test_01 {
         List<String> list = new ArrayList<>();
         List<String> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
+        List<String> list3 = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             String s = bf.readLine();
             list.add(s);
@@ -28,19 +31,20 @@ public class Test_01 {
             if (i % 3 == 0) {
                 list1.add(list.get(i));
                 list2.add(list.get(i));
-
             }
             if (i % 2 == 0) {
                 list1.add(list.get(i));
                 list2.add(list.get(i));
             }
-            if (i % 1 == 0) {
-                list2.add(list2.get(i));
+            if (i % 2 != 0 && i % 3!= 0){
+                list2.add(list3.get(i));
             }
         }
-
     }
-    public static void printList(List<String> list, List<String> list1, List<String> list2){
-        System.out.println(list.get(i));
+
+    public static void printList(List<String> list, List<String> list1, List<String> list2) {
+        for (int i = 0; i < list.size(); i++) {
+
+        }
     }
 }
