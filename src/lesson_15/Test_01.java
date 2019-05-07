@@ -15,26 +15,32 @@ import java.util.List;
 */
 public class Test_01 {
     public static void main(String[] args) throws IOException {
+        printList(list1);
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         List<String> list = new ArrayList<>();
-        List<String>list1 = new ArrayList<>();
-        List<String>list2 = new ArrayList<>();
+        List<String> list1 = new ArrayList<>();
+        List<String> list2 = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             String s = bf.readLine();
             list.add(s);
         }
         for (int i = 0; i < list.size(); i++) {
             if (i % 3 == 0) {
-                list1.add(list);
+                list1.add(list.get(i));
+                list2.add(list.get(i));
+
             }
-            if (i%2==0){
-                list1.add(list);
+            if (i % 2 == 0) {
+                list1.add(list.get(i));
+                list2.add(list.get(i));
             }
-            if (i==0){
-                list2.add(list2);
+            if (i % 1 == 0) {
+                list2.add(list2.get(i));
             }
         }
 
     }
-
+    public static void printList(List<String> list, List<String> list1, List<String> list2){
+        System.out.println(list.get(i));
+    }
 }
