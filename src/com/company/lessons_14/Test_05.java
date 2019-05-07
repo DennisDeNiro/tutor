@@ -32,7 +32,5 @@ public class Test_05 {
                 System.out.println(list.get(i));
             }
         }
-
-
     }
 }

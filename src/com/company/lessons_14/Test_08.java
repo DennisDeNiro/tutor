@@ -20,7 +20,7 @@ public class Test_08 {
         list.add("Petya");
         list.add("Alla");
         list.add("Dennis");
-        for (int i=0; i<list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
     }

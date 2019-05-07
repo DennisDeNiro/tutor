@@ -28,7 +28,7 @@ public class Test_07 {
             if (list.get(i).length() < min) {
                 min = list.get(i).length();
             }
-            else if (list.get(i).length() == min) {
+             if (list.get(i).length() == min) {
                 System.out.println(list.get(i));
             }
         }
