@@ -29,11 +29,9 @@ public class Test_01 {
         for (int i = 0; i < list.size(); i++) {
             if (i % 3 == 0) {
                 list1.add(list.get(i));
-            }
-            else if (i % 2 == 0) {
+            } else if (i % 2 == 0 && i % 3 == 0) {
                 list2.add(list.get(i));
-            }
-            else if (i % 2 != 0 && i % 3!= 0){
+            } else if (i % 2 != 0 && i % 3 != 0) {
                 list3.add(list.get(i));
             }
         }
