@@ -31,7 +31,7 @@ public class Test_01 {
                 list1.add(list);
             }
             if (i==0){
-                list.add(list2);
+                list2.add(list2);
             }
         }
 
