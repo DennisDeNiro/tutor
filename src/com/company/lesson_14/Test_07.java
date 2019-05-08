@@ -28,9 +28,12 @@ public class Test_07 {
             if (list.get(i).length() < min) {
                 min = list.get(i).length();
             }
-             if (list.get(i).length() == min) {
-                System.out.println(list.get(i));
+        }
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).length() == min) {
+                    System.out.println(list.get(i));
+                }
             }
         }
-    }
+
 }

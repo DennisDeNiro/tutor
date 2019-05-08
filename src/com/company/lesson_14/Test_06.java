@@ -12,6 +12,8 @@ import java.util.List;
 3. Удали последнюю строку и вставь её в начало. Повторить 13 раз.
 4. Используя цикл выведи содержимое на экран, каждое значение с новой строки.
 */
+
+//разобрться как работает код
 public class Test_06 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

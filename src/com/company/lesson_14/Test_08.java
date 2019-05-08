@@ -1,5 +1,8 @@
 package com.company.lesson_14;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,17 +12,15 @@ import java.util.List;
 3. Используя цикл выведи содержимое на экран, каждое значение с новой строки.
 */
 public class Test_08 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         List<String> list = new ArrayList<>();
-        list.add("Vanya");
-        list.add("Olya");
-        list.add("Katya");
-        list.add("Denis");
-        list.add("Roman");
-        list.add("Inna");
-        list.add("Petya");
-        list.add("Alla");
-        list.add("Dennis");
+        while (true) {
+            list.add(0, bf.readLine());
+            if (list.size() > 10) {
+                break;
+            }
+        }
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
