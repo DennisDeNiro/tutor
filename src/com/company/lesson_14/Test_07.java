@@ -1,4 +1,4 @@
-package com.company.lessons_14;
+package com.company.lesson_14;
 /*
 1. Создай список строк.
 2. Считай с клавиатуры 5 строк и добавь в список.
