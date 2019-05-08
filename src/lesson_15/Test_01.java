@@ -36,9 +36,9 @@ public class Test_01 {
             }
         }
         printList(list3);
-        System.out.println("-----");
+        System.out.print("-----");
         printList(list2);
-        System.out.println("------");
+        System.out.print("------");
         printList(list1);
     }
 
