@@ -43,7 +43,7 @@ public class Test_02 {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).contains("р") && list.get(i).contains("л")) {
                 continue;
-            } else if (list.get(i).contains("л")) {
+            }  if (list.get(i).contains("л")) {
                 list.add(list.get(i));
             }
             if (list.get(i).contains("р")) {

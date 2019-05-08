@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 /* Создать список чисел и заполнить его с консоли следующим образом:
  чётные числа добавляють в конец списка, нечётные — в начало. */
+// TODO: 08.05.2019  
 public class Test_03 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

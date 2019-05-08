@@ -25,10 +25,13 @@ public class Test_05 {
             if (list.get(i).length() > max) {
                 max = list.get(i).length();
             }
-
-             if (list.get(i).length() == max) {
+        }
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).length() == max) {
+                max = list.get(i).length();
                 System.out.println(list.get(i));
             }
         }
+
     }
 }

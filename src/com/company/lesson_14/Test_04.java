@@ -9,6 +9,7 @@ import java.util.List;
  Создать второй список чисел и заполнить его используя Collections.addAll(list2, 1, 8, 6, 21, 53, 5, 67, 18);
  Создать третий список чисел и заполнить его значениями из первого и второго списков
 */
+// TODO: 08.05.2019  
 public class Test_04 {
     public static void main(String[] args) {
         List<Integer> list1 = new ArrayList<Integer>();
