@@ -33,7 +33,6 @@ public class Test_02 {
             list.add(s);
         }
         fix(list);
-
         for (String s : list) {
             System.out.println(s);
         }
@@ -45,7 +44,7 @@ public class Test_02 {
             if (list.get(i).contains("р") && list.get(i).contains("л")) {
                 continue;
             } else if (list.get(i).contains("л")) {
-                list.add(list.get(i)); list.add(list.get(i));
+                list.add(list.get(i));
             }
             if (list.get(i).contains("р")) {
                 list.remove(list.get(i));
