@@ -24,6 +24,7 @@ import java.util.List;
 лоза
 лоза
 */
+// TODO: 08.05.2019  
 public class Test_02 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
