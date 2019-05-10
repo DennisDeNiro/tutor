@@ -37,19 +37,23 @@ public class Test_02 {
         for (String s : list) {
             System.out.println(s);
         }
+
     }
 
     //contains дальше remove ,add
     public static void fix(List<String> list) {
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < 3; i++) {
             if (list.get(i).contains("р") && list.get(i).contains("л")) {
                 continue;
-            }  if (list.get(i).contains("л")) {
+            }
+            else if (list.get(i).contains("р")) {
+                list.remove(list.get(i));
+                break;
+            }
+             if (list.get(i).contains("л")) {
                 list.add(list.get(i));
             }
-            if (list.get(i).contains("р")) {
-                list.remove(list.get(i));
-            }
+
         }
     }
 }
