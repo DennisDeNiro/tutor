@@ -16,9 +16,11 @@ public class Test_04 {
         Collections.addAll(list1, 1, 5, 6, 11, 3, 15, 7, 8);
         List<Integer> list2 = new ArrayList<Integer>();
         Collections.addAll(list2, 1, 8, 6, 21, 53, 5, 67, 18);
-        List<Integer> newlist3 = new ArrayList(list1.size() + list2.size());
+        List<Integer> list3 = new ArrayList<Integer>();
+        list3.addAll(list1);
+        list3.addAll(list2);
+            System.out.println(list3);
 
-        }
     }
-
+}
 ///List<Integer> newlist3 = ListUtils.union(list1,list2); работает только с String ????
