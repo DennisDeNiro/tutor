@@ -35,7 +35,7 @@ public class Test_01 {
 //                    System.out.print(" " + list.get(i));
 //                    System.out.print(" " + list.get(i));
                 }
-                if (s.length() != s.length() % 2) {
+                if (s.length()%2 != 0) {
                     list1.add(s + " " + s + " " + s);
 //                    System.out.print(" " + list.get(i));
 //                    System.out.print(" " + list.get(i));
