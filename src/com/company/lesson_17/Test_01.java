@@ -22,6 +22,7 @@ public class Test_01 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         List<String> list = new ArrayList<>();
+        List<String> list1 = new ArrayList<>();
         while (true) {
             String s = bf.readLine();
             list.add(s);
@@ -30,15 +31,18 @@ public class Test_01 {
                     break;
                 }
                 if (s.length() % 2 == 0) {
-                    System.out.print(" " + list.get(i));
-                    System.out.print(" " + list.get(i));
+                    list1.add(s + " " + s);
+//                    System.out.print(" " + list.get(i));
+//                    System.out.print(" " + list.get(i));
                 }
                 if (s.length() != s.length() % 2) {
-                    System.out.print(" " + list.get(i));
-                    System.out.print(" " + list.get(i));
-                    System.out.print(" " + list.get(i));
+                    list1.add(s + " " + s + " " + s);
+//                    System.out.print(" " + list.get(i));
+//                    System.out.print(" " + list.get(i));
+//                    System.out.print(" " + list.get(i));
                 }
             }
+            System.out.println(list1);
         }
     }
 }
