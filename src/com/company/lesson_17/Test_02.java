@@ -87,12 +87,11 @@ class Cat {
 
     @Override
     public String toString() {
-        return "Cat{" +
-                "Cat name is='" + name + '\'' +
-                ", age is=" + age +
-                ", weight is=" + weight +
-                ", tail=" + tail +
-                '}';
+        return
+                "Cat name is = " + name  +
+                ", age is = " + age +
+                ", weight is = " + weight +
+                ", tail = " + tail ;
     }
 }
 
