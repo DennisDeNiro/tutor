@@ -20,7 +20,7 @@ public class Test_04 {
 
             list.remove(2);
 
-        for (int i = list.size() - 1; i >= 0; i--) {
+        for (int i = list.size()-1; i >= 0; i--) {
             System.out.println(list.get(i));
         }
     }
