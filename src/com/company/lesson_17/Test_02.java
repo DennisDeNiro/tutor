@@ -24,6 +24,9 @@ public class Test_02 {
         while (true) {
             BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
             String name = bf.readLine();
+            if (name.isEmpty()){
+                break;
+            }
             int age = Integer.parseInt(bf.readLine());
             int weight = Integer.parseInt(bf.readLine());
             int tail = Integer.parseInt(bf.readLine());
@@ -31,9 +34,7 @@ public class Test_02 {
             System.out.println(cat.toString());
             List<Cat> list = new ArrayList<>();
             list.add(cat);
-            if (name.isEmpty()){
-                break;
-            }
+
         }
     }
 }
