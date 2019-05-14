@@ -24,17 +24,18 @@ public class Test_02 {
         while (true) {
             BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
             String name = bf.readLine();
-            if (name.isEmpty()){
+            if (name.isEmpty()) {
                 break;
             }
             int age = Integer.parseInt(bf.readLine());
             int weight = Integer.parseInt(bf.readLine());
             int tail = Integer.parseInt(bf.readLine());
             Cat cat = new Cat(name, age, weight, tail);
-            System.out.println(cat.toString());
             List<Cat> list = new ArrayList<>();
             list.add(cat);
-
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println(list.get(i));
+            }
         }
     }
 }
@@ -88,10 +89,10 @@ class Cat {
     @Override
     public String toString() {
         return
-                "Cat name is = " + name  +
-                ", age is = " + age +
-                ", weight is = " + weight +
-                ", tail = " + tail ;
+                "Cat name is = " + name +
+                        ", age is = " + age +
+                        ", weight is = " + weight +
+                        ", tail = " + tail;
     }
 }
 
