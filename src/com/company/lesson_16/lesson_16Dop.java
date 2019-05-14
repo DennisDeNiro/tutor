@@ -16,7 +16,7 @@ public class lesson_16Dop {
         for (int i = 0; i < x.length; i++) {
             x[i] = Integer.parseInt(bf.readLine());
         }
-        for (int i = x.length-1; i>=0; i--){
+        for (int i = x.length - 1; i >= 0; i--) {
             System.out.println(x[i]);
         }
     }

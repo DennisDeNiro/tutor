@@ -10,8 +10,9 @@ import java.io.InputStreamReader;
 // я не пониаю в чем ошибка?
 public class Test_03 {
     public static void main(String[] args) throws IOException {
-        System.out.println(MinInt(NumberInt()));
-        System.out.println(MaxInt(NumberInt()));
+        int[] array = NumberInt();
+        System.out.println(MinInt(array));
+        System.out.println(MaxInt(array));
     }
 
     public static int[] NumberInt() throws IOException {

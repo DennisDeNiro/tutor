@@ -21,9 +21,12 @@ import java.util.Map;
 лось лось
 рак рак
 */
+// TODO: 14.05.2019  
 public class Test_03 {
     public static void main(String[] args) throws IOException {
-        System.out.print(doubleValues(EnterLetter()));
+        for (String arg : doubleValues(EnterLetter())) {
+            System.out.println(arg);
+        }
     }
 
     private static ArrayList<String> EnterLetter() throws IOException {

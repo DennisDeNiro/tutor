@@ -24,7 +24,7 @@ import java.util.List;
 лоза
 лоза
 */
-// TODO: 08.05.2019  
+// TODO: 14.05.2019  
 public class Test_02 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -42,7 +42,7 @@ public class Test_02 {
 
     //contains дальше remove ,add
     public static void fix(List<String> list) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < list.size(); i++) {
             if (list.get(i).contains("р") && list.get(i).contains("л")) {
                 continue;
             }
