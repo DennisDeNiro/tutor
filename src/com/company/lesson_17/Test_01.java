@@ -23,26 +23,27 @@ public class Test_01 {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         List<String> list = new ArrayList<>();
         List<String> list1 = new ArrayList<>();
+
         while (true) {
             String s = bf.readLine();
-            list.add(s);
-            for (int i = 0; i < list.size(); i++) {
-                if (s.isEmpty()) {
-                    break;
-                }
-                if (s.length() % 2 == 0) {
-                    list1.add(s + " " + s);
-//                    System.out.print(" " + list.get(i));
-//                    System.out.print(" " + list.get(i));
-                }
-                if (s.length()%2 != 0) {
-                    list1.add(s + " " + s + " " + s);
-//                    System.out.print(" " + list.get(i));
-//                    System.out.print(" " + list.get(i));
-//                    System.out.print(" " + list.get(i));
-                }
+            if (s.isEmpty()) {
+                break;
             }
-            System.out.println(list1);
+            list.add(s);
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            String s = list.get(i);
+            if (s.length() % 2 == 0) {
+                list1.add(s + " " + s);
+            }
+            if (s.length() % 2 != 0) {
+                list1.add(s + " " + s + " " + s);
+            }
+        }
+
+        for (String s : list1) {
+            System.out.println(s);
         }
     }
 }
