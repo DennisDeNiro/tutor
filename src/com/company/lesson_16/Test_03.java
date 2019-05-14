@@ -7,7 +7,7 @@ package com.company.lesson_16;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+// я не пониаю в чем ошибка?
 public class Test_03 {
     public static void main(String[] args) throws IOException {
         System.out.println(MinInt(NumberInt()));
