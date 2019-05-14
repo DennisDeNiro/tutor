@@ -21,16 +21,20 @@ Cat name is Murka, age is 8, weight is 7, tail = 20
 */
 public class Test_02 {
     public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String name = bf.readLine();
-        int age = Integer.parseInt(bf.readLine());
-        int weight = Integer.parseInt(bf.readLine());
-        int tail = Integer.parseInt(bf.readLine());
-        Cat cat = new Cat(name,age,weight,tail);
-        System.out.println(cat.toString());
-        List<Cat> list = new ArrayList<>();
-        list.add(cat);
-
+        while (true) {
+            BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+            String name = bf.readLine();
+            int age = Integer.parseInt(bf.readLine());
+            int weight = Integer.parseInt(bf.readLine());
+            int tail = Integer.parseInt(bf.readLine());
+            Cat cat = new Cat(name, age, weight, tail);
+            System.out.println(cat.toString());
+            List<Cat> list = new ArrayList<>();
+            list.add(cat);
+            if (name.isEmpty()){
+                break;
+            }
+        }
     }
 }
 
