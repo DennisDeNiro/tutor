@@ -21,15 +21,18 @@ Cat name is Barsik, age is 6, weight is 5, tail = 22
 Cat name is Murka, age is 8, weight is 7, tail = 20
 */
 public class Test_02 {
-    public static void main(String[] args) {
-        Cat cat = new Cat();
-         cat.name = name();
-    }
-
-    public static String name() throws IOException {
+    public static void main(String[] args) throws IOException {
+        Cat cat = new Cat(cat.name,);
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String name = bf.readLine();
-        return name;
+        name = cat.name;
+        int age = Integer.parseInt(bf.readLine());
+        age = cat.age;
+        int weight = Integer.parseInt(bf.readLine());
+        weight = cat.weight;
+        int tail = Integer.parseInt(bf.readLine());
+        tail = cat.tail;
+        System.out.println(cat.toString());
     }
 }
 
@@ -40,12 +43,51 @@ class Cat {
     public int weight;
     public int tail;
 
+    public Cat(String name, int age, int weight, int tail) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.tail = tail;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getTail() {
+        return tail;
+    }
+
+    public void setTail(int tail) {
+        this.tail = tail;
+    }
+
     @Override
     public String toString() {
         return "Cat{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", weight=" + weight +
+                "Cat name is='" + name + '\'' +
+                ", age is=" + age +
+                ", weight is=" + weight +
                 ", tail=" + tail +
                 '}';
     }
