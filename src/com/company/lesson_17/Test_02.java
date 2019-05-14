@@ -1,12 +1,11 @@
 package com.company.lesson_17;
 
 
-import jdk.nashorn.internal.ir.CatchNode;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
 Задача:  Программа вводит с клавиатуры данные про котов и выводит их на экран.
@@ -22,26 +21,25 @@ Cat name is Murka, age is 8, weight is 7, tail = 20
 */
 public class Test_02 {
     public static void main(String[] args) throws IOException {
-        Cat cat = new Cat(cat.name,);
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String name = bf.readLine();
-        name = cat.name;
         int age = Integer.parseInt(bf.readLine());
-        age = cat.age;
         int weight = Integer.parseInt(bf.readLine());
-        weight = cat.weight;
         int tail = Integer.parseInt(bf.readLine());
-        tail = cat.tail;
+        Cat cat = new Cat(name,age,weight,tail);
         System.out.println(cat.toString());
+        List<Cat> list = new ArrayList<>();
+        list.add(cat);
+
     }
 }
 
 
 class Cat {
-    public String name;
-    public int age;
-    public int weight;
-    public int tail;
+    private String name;
+    private int age;
+    private int weight;
+    private int tail;
 
     public Cat(String name, int age, int weight, int tail) {
         this.name = name;
