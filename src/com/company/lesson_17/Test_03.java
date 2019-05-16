@@ -19,15 +19,17 @@ public class Test_03 {
 
         while (true) {
             String s = bf.readLine();
-            list.add(s);
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).contains("end")) {
-                    list.remove(list.get(i));
+                if (s.equals("end")) {
                     break;
+                } else {
+                    list.add(s);
                 }
+            }
+            for (String s : list) {
+                System.out.println(s);
             }
         }
 
-
     }
-}
+
+
