@@ -10,6 +10,6 @@ public class Test_05 {
         Date date1 = new Date();
         System.out.println(date);
         System.out.println(date1);
-
+        System.out.println(date1.getTime()-date.getTime());
     }
 }
