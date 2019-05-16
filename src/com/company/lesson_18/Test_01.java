@@ -20,7 +20,6 @@ public class Test_01 {
             }else {
                 System.out.println(x[i]);
             }
-
         }
     }
 }
