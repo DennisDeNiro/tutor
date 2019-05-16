@@ -11,13 +11,29 @@ import java.util.List;
 2. Считать N целых чисел и заполнить ими список - метод getIntegerList.
 3. Найти минимальное число среди элементов списка - метод getMinimum.
 */
+
 public class Test_03 {
     public static void main(String[] args) {
-        List<Integer>list = new ArrayList<>();
+//        getMinium(getIntegerList());
     }
 
-    public static int getIntegerList(int list) throws IOException {
+    public static void getIntegerList() throws IOException {
+        List<Integer> list = new ArrayList<>();
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        list = Integer.parseInt(bf.readLine());
+        while (true) {
+            int x = Integer.parseInt(bf.readLine());
+            if (list.isEmpty()) {
+                break;
+            }
+        }
+    }
+
+    public static void getMinium(List<Integer> list) {
+        int min = list.get(0);
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) < min) {
+                min = list.get(i);
+            }
+        }
     }
 }

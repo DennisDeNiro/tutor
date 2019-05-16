@@ -1,4 +1,8 @@
 package com.company.HW.Home_work_09;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 1. Создай класс Human с полями имя (String), пол (boolean), возраст (int), дети (ArrayList<Human>).
 2. Создай объекты и заполни их так, чтобы получилось: два дедушки, две бабушки, отец, мать, трое детей.
@@ -9,4 +13,7 @@ package com.company.HW.Home_work_09;
 Имя: papa Fedya, пол: мужской, возраст: 40, дети: son Lesha, son Misha, daughter Masha
 */
 public class Test_02 {
+    public static void main(String[] args) {
+
+    }
 }
