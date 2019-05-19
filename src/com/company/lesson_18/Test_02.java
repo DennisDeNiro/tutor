@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
 Пример вывода:
   Хочу     Большую Зарплату.
 */
+// TODO: 19.05.2019  
 public class Test_02 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
