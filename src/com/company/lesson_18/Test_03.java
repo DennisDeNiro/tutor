@@ -12,7 +12,7 @@ public class Test_03 {
 
         long msDay = 24 * 60 * 60 * 1000;//сколько миллисекунд в одних сутках
         System.out.println(date.getTime() / msDay / 365);
-
+        System.out.println(msDay);
         System.out.println(date.getMonth());
     }
 }
