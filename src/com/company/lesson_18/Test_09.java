@@ -19,7 +19,7 @@ public class Test_09 {
         int number = Integer.parseInt(reader.readLine());
         int last_num;
         int sun = 0;
-        while(number>0){
+        while(number!=0){
             last_num = number%10; // берем последнее число
             number/=10; //записываем в number значение последних чисел без последнего
             sun = sun*10+last_num;// sun = 0*10+5
