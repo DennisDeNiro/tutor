@@ -14,11 +14,14 @@ import java.util.List;
 public class Test_01 {
     public static void main(String[] args) {
         int[] x = new int[]{123456789, 65475264, 836133896, 836133896, 746254373, 1000000000, 542627588, 1000000000, 444088605, 65475264, 746254373, 542627588, 444088605};
+        int first = x[0];
         for (int i = 0; i < x.length; i++) {
+            if (x[i] == x[0]){
 
-
+            }
+            }
         }
     }
-}
+
 
 

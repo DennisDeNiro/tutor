@@ -9,6 +9,7 @@ public class Test_08 {
         int second = date.getSeconds();
         int minute = date.getMinutes();
         int hours = date.getHours();
+        System.out.println("Времени прошло : " + date.getHours() + " " + date.getMinutes() + " " + date.getSeconds());
         System.out.println("Времени прошло : " + hours + " " + minute + " " + second);
     }
 }
