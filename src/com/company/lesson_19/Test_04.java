@@ -13,8 +13,10 @@ Collection
  - LinkedHashSet
  - TreeSet
 - Map
- -
-
+ - HashMap
+ - LinkedHashMap
+ - TreeMap
+ - Hashtable
 - Queue
  */
 public class Test_04 {
