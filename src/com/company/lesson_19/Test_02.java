@@ -13,13 +13,27 @@ public class Test_02 {
     public static void main(String[] args) {
        List list = new ArrayList();
        List list2 = new LinkedList();
-       list.add()
-
+       System.out.println(getTimeMsOfInsert(fill(list)));
+       System.out.println(getTimeMsOfInsert(fill(list2)));
     }
-    private static Date getTimeMsOfInsert() throws InterruptedException {
-        Date date = new Date();
-        Thread.sleep(10000);
-        date.
-        return ;
+
+    private static List fill(List list){
+        for (int i = 0; i < 100000; i++) {
+            list.add(new Object());
+        }
+        return list;
+    }
+
+    private static void insertion(List list){
+        for (int i = 0; i < 10000; i++) {
+            list.add(0, new Object());
+        }
+    }
+
+    private static long getTimeMsOfInsert(List list) {
+        Date startDate = new Date();
+        insertion(list);
+        Date endDate = new Date();
+        return endDate.getTime() - startDate.getTime();
     }
 }
