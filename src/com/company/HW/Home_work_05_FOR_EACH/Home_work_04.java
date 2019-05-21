@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 Если пользователь ввел -1, вывести на экран сумму и завершить программу.
  -1 должно учитываться в сумме.
 */
-// TODO: 09.04.2019  
+
 public class Home_work_04 {
 
     public static void main(String[] args) throws IOException {

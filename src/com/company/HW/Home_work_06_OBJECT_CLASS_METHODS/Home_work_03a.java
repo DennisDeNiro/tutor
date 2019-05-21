@@ -17,7 +17,7 @@ public class Home_work_03a {
         System.out.println("Мужчина замудем за : "+ woman.getHusband().getName());
     }
 }
-// TODO: 04.04.2019
+
 
 class Woman2 {
     private String name;
