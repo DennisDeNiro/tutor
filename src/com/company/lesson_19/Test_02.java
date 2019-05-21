@@ -13,9 +13,13 @@ public class Test_02 {
     public static void main(String[] args) {
        List list = new ArrayList();
        List list2 = new LinkedList();
+       list.add()
 
     }
-    private static int getTimeMsOfInsert() throws InterruptedException {
+    private static Date getTimeMsOfInsert() throws InterruptedException {
+        Date date = new Date();
         Thread.sleep(10000);
+        date.
+        return ;
     }
 }
