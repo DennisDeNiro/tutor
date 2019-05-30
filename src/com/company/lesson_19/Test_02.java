@@ -18,7 +18,7 @@ public class Test_02 {
     }
 
     private static List fill(List list){
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             list.add(new Object());
         }
         return list;
@@ -37,3 +37,4 @@ public class Test_02 {
         return endDate.getTime() - startDate.getTime();
     }
 }
+//зачем сдесб два листа
