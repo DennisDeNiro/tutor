@@ -12,28 +12,28 @@ import java.util.List;
 Имя: baba Masha, пол: женский, возраст: 65, дети: papa Fedya
 Имя: papa Fedya, пол: мужской, возраст: 40, дети: son Lesha, son Misha, daughter Masha
 */
-// TODO: 21.05.2019  
+//задача готова
 public class Test_02 {
     public static void main(String[] args) {
-        Human child = new Human("Ivan", true, 4);
-        Human child1 = new Human("Maksim", true, 5);
-        Human child2 = new Human("Anna", false, 5);
-        ArrayList<Human> children = new ArrayList<>();
-        children.add(child);
-        children.add(child1);
-        children.add(child2);
-        Human father = new Human("Vasya", true, 45, children);
-        Human mother = new Human("Alla", false, 37, children);
-        ArrayList<Human> children2 = new ArrayList<>();
-        children2.add(father);
-        children2.add(mother);
-        Human granfather = new Human("Vitya", true, 65, children2);
-        Human granmother = new Human("Zina", false, 66, children2);
-        Human granfather1 = new Human("Vitya", true, 65, children2);
-        Human granmother1 = new Human("Zina", false, 66, children2);
-        System.out.println(child.toString());
-        System.out.println(child1.toString());
-        System.out.println(child2.toString());
+        Human son = new Human("Ivan", true, 4);
+        Human son1 = new Human("Maksim", true, 5);
+        Human girl = new Human("Anna", false, 5);
+        ArrayList<Human> child = new ArrayList<>();
+        child.add(son);
+        child.add(son1);
+        child.add(girl);
+        Human father = new Human("Vasya", true, 45, child);
+        Human mother = new Human("Alla", false, 37, child);
+        ArrayList<Human> child1 = new ArrayList<>();
+        child1.add(father);
+        child1.add(mother);
+        Human granfather = new Human("Vitya", true, 65, child1);
+        Human granmother = new Human("Zina", false, 66, child1);
+        Human granfather1 = new Human("Vitya", true, 65, child1);
+        Human granmother1 = new Human("Zina", false, 66, child1);
+        System.out.println(son.toString());
+        System.out.println(son1.toString());
+        System.out.println(girl.toString());
         System.out.println(father.toString());
         System.out.println(mother.toString());
         System.out.println(granfather.toString());
@@ -98,16 +98,16 @@ class Human extends ArrayList<Human> {
     @Override
     public String toString() {
         String res = "";
-        res += "Name : " + getName();
-        res += ", Sex : " + (isSex() ? "мужской" : "женский");
-        res += ", Age : " + getAge();
+        res += "Имя : " + getName();
+        res += ", пол : " + (isSex() ? "мужской" : "женский");
+        res += ", возраст : " + getAge();
 
         int childcount = this.child.size();
         if (childcount > 0)
         {
-            res += ", Child : " + this.child.get(0).name;
+            res += ", дети : " + this.child.get(0).name;
 
-            for (int i = 0; i < childcount; i++)
+            for (int i = 1; i < childcount; i++)
             {
                 Human child = this.child.get(i);
                 res += ", " + child.name;
