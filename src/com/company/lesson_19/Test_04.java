@@ -46,8 +46,15 @@ public class Test_04 {
         map.put("text4", 3);
         map.put("text3", 4);
 
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + "  " + entry.getValue());
+        Iterator<Map.Entry<String, Integer>> mapIter = map.entrySet().iterator();
+        while (mapIter.hasNext()){
+            Map.Entry<String, Integer> text = mapIter.next();
+            System.out.println(text.getKey() + " - " + text.getValue());
         }
+
+
+//        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+//            System.out.println(entry.getKey() + "  " + entry.getValue());
+//        }
     }
 }
