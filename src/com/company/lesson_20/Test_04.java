@@ -21,6 +21,7 @@ import java.util.Map;
         map.put("Gevey", "Geveyn");
         map.put("Hugs", "Hugsn");
 */
+// TODO: 02.06.2019  
 public class Test_04 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -28,7 +29,7 @@ public class Test_04 {
         String s = bf.readLine();
         String s1 = bf.readLine();
 
-        haveAnotherName(takeMap());
+//        haveAnotherName(takeMap());
     }
 
     public static Map<String, String> takeMap() {
