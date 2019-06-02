@@ -20,7 +20,7 @@ public class Test_01 {
     }
 
     public static List fill(List list) {
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < 10000; i++) {
             list.add(new Object());
         }
         return list;
