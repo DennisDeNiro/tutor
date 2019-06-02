@@ -13,7 +13,7 @@ import java.util.List;
 public class Test_01 {
     public static void main(String[] args) {
         List list = new ArrayList<>();
-        System.out.println(fill(getList(getTimeMsOfGet(List list))));
+        System.out.println(getTimeMsOfGet(fill(list)));
     }
 
     public static List fill(List list) {
