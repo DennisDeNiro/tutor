@@ -36,7 +36,8 @@ public class Test_02 {
         return list;
     }
 
-    public static List getListForRemove(List list) {
+    public static List getListForRemove(List list) {// кроме начала списка
+
         return list;
     }
 }
