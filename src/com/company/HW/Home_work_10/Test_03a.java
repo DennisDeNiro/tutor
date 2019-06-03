@@ -12,8 +12,7 @@ import java.util.Set;
 */
 public class Test_03a {
     public static void main(String[] args) {
-
-        System.out.print(setIterator(setInteger()));
+        setIterator(setInteger());
     }
 
     public static Set<String> setInteger() {
@@ -26,11 +25,11 @@ public class Test_03a {
         return set;
     }
 
-    public static Set<String> setIterator(Set<String> set) {
+    public static void setIterator(Set<String> set) {
         Iterator<String> iterator = set.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             String text = iterator.next();
+            System.out.println(text);
         }
-        return set;
     }
 }
