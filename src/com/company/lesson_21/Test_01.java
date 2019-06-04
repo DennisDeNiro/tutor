@@ -22,7 +22,7 @@ import java.util.Map;
 public class Test_01 {
     public static void main(String[] args) {
         Map<String, Date> map = takeMap();
-        System.out.println(takeDateSummer(takeDateSummer()));
+        System.out.print(takeDateSummer(map));
     }
 
     private static Map<String, Date> takeMap() {
@@ -41,20 +41,14 @@ public class Test_01 {
     }
 
 
-    private static void takeDateSummer(Map<String, Date> map) {
-        Date date = new Date();
-        date.setHours(0);
-        date.setMinutes(0);
-        date.setSeconds(0);
-        date.setMonth(5);
-        date.setDate(1);
+    private static Map<String, Date> takeDateSummer(Map<String, Date> map) {
         Iterator<Map.Entry<String, Date>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, Date> text = iterator.next();
-            if (date.getMonth() > 5 && date.getMonth() < 8) ;
-            map.clear();
+            if (text.getValue().getMonth() >= 5 && text.getValue().getMonth() <= 8) {
+                iterator.remove();
+            }
         }
-
-
+        return map;
     }
 }
