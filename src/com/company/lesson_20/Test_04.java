@@ -21,19 +21,19 @@ import java.util.Map;
         map.put("Gevey", "Geveyn");
         map.put("Hugs", "Hugsn");
 */
-// TODO: 02.06.2019  
+
 public class Test_04 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите имя и фамилию");
         String s = bf.readLine();
         String s1 = bf.readLine();
-        takeMap();
-//        System.out.println(haveAnotherName());
-//        System.out.println(haveAnotherName2());
+        Map<String, String> map = takeMap();
+        System.out.println(haveAnotherName(map, s));
+        System.out.println(haveAnotherName2(map, s1));
     }
 
-    public static Map<String, String> takeMap() {
+    private static Map<String, String> takeMap() {
         Map<String, String> map = new HashMap<>();
         map.put("Simn", "Tomn");
         map.put("Simn", "Arbusn");
@@ -47,7 +47,7 @@ public class Test_04 {
         return map;
     }
 
-    public static int haveAnotherName(Map<String, String> map, String s) {
+    private static int haveAnotherName(Map<String, String> map, String s) {
         Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
         int count = 0;
         while (iterator.hasNext()) {
@@ -59,7 +59,7 @@ public class Test_04 {
         return count;
     }
 
-    public static int haveAnotherName2(Map<String, String> map, String s1) {
+    private static int haveAnotherName2(Map<String, String> map, String s1) {
         Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
         int count = 0;
         while (iterator.hasNext()) {

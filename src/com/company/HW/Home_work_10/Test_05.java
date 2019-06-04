@@ -20,7 +20,7 @@ import java.util.Map;
 public class Test_05 {
     public static void main(String[] args) {
         String[] cats = new String[]{"васька", "мурка", "дымка", "рыжик", "серый", "снежок", "босс", "борис", "визя", "гарфи"};
-        HashMap<String, Cat> text = CatsAddToMap(cats);
+        HashMap<String, Cat> text = сatsAddToMap(cats);
 
         for (Map.Entry<String, Cat> animal: text.entrySet()){
             System.out.println(animal.getValue()+" - "+animal.getKey());
@@ -28,7 +28,7 @@ public class Test_05 {
 
     }
 
-    public static HashMap<String, Cat> CatsAddToMap(String[] cats) {
+    public static HashMap<String, Cat> сatsAddToMap(String[] cats) {
         HashMap<String, Cat> text = new HashMap<String, Cat>();
         for (String s : cats) {
             text.put(s, new Cat(s));
