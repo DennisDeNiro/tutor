@@ -33,7 +33,7 @@ public class Test_01 {
         map.put("Stallone3", new Date("JUNE 1 1980"));
         map.put("Stallone4", new Date("JUNE 1 1980"));
         map.put("Stallone5", new Date("JUNE 1 1980"));
-        map.put("Stallone6", new Date("JUNE 1 1980"));
+        map.put("Stallone6", new Date("SEPTEMBER 1 1980"));
         map.put("Stallone7", new Date("JUNE 1 1980"));
         map.put("Stallone8", new Date("DECEMBER 1 1980"));
         map.put("Stallone9", new Date("MARCH 1 1980"));
@@ -45,7 +45,7 @@ public class Test_01 {
         Iterator<Map.Entry<String, Date>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, Date> text = iterator.next();
-            if (text.getValue().getMonth() >= 5 && text.getValue().getMonth() <= 8) {
+            if (text.getValue().getMonth() >= 5 && text.getValue().getMonth() < 8) {
                 iterator.remove();
             }
         }
