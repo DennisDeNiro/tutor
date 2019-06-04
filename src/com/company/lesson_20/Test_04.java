@@ -28,8 +28,9 @@ public class Test_04 {
         System.out.println("Введите имя и фамилию");
         String s = bf.readLine();
         String s1 = bf.readLine();
-
-//        haveAnotherName(takeMap());
+        takeMap();
+//        System.out.println(haveAnotherName());
+//        System.out.println(haveAnotherName2());
     }
 
     public static Map<String, String> takeMap() {
@@ -46,14 +47,27 @@ public class Test_04 {
         return map;
     }
 
-    public static void haveAnotherName(Map<String, String> map,String s) {
+    public static int haveAnotherName(Map<String, String> map, String s) {
         Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
         int count = 0;
         while (iterator.hasNext()) {
             Map.Entry<String, String> text = iterator.next();
-            if (text.getKey().equals(s)) {
+            if (text.getKey().equals(s)){
                 count++;
             }
         }
+        return count;
+    }
+
+    public static int haveAnotherName2(Map<String, String> map, String s1) {
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        int count = 0;
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> text = iterator.next();
+            if (text.getValue().equals(s1)) {
+                count++;
+            }
+        }
+        return count;
     }
 }
