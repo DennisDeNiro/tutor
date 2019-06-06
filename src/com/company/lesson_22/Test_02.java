@@ -7,16 +7,20 @@ import java.math.BigInteger;
 */
 public class Test_02 {
     public static void main(String[] args) {
-        System.out.println(fibonachhi(10));
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(fibonachhi(i));
+        }
     }
 
     private static int fibonachhi(int n){
-        int res;
-
-        if (n==0);
-        return 0;
-
-
-
+        if (n<=0) {
+            return 0;
+        } else if(n == 1){
+            return 1;
+        } else if(n == 2){
+            return 1;
+        } else {
+          return fibonachhi(n-1) + fibonachhi(n - 2);
+        }
     }
 }
