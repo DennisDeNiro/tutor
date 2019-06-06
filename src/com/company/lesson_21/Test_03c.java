@@ -19,11 +19,12 @@ map.put("Balotelli", "Mario");
 map.put("Gotze", "Mario");
 map.put("Gomez", "Mario");
 */
-public class Test_02 {
+public class Test_03c {
     public static void main(String[] args) {
 
         Map<String, String> map1 = takeMap();
         deleteName(map1);
+        System.out.println(map1);
     }
 
     private static Map<String, String> takeMap() {
@@ -41,19 +42,36 @@ public class Test_02 {
         return map;
     }
 
-    private static int deleteName(Map<String, String> map) {
+    private static void deleteName(Map<String, String> map) {
         Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
-        int count = 0;
+        Iterator<Map.Entry<String, String>> iterator1 = map.entrySet().iterator();
+        int n = 0;
         while (iterator.hasNext()) {
-            Map.Entry<String, String> text = iterator.next();
-            if (text.getValue()==text.getValue()+1) {
-                iterator.remove();
-            } else {
-                count++;
+            Map.Entry<String, String> pair = iterator.next();
+            String key = pair.getKey();
+            String value = pair.getValue();
+
+            while (iterator1.hasNext()) {
+                Map.Entry<String, String> pair1 = iterator1.next();
+                String key1 = pair1.getKey();
+                String value1 = pair1.getValue();
+                if (value.equals(value1)) {
+                    n++;
+                    if (n > 1) {
+                        removeByValue(map, value);
+                    }
+                }
             }
         }
-        return count;
     }
+
+    private static void removeByValue(Map<String, String> map, String value) {
+        HashMap<String, String> copy = new HashMap<String, String>(map);
+        for (Map.Entry<String, String> pair : copy.entrySet()) {
+            if (pair.getValue().equals(value)) {
+                map.remove(pair.getKey());
+            }
+        }
+    }
+
 }
-//два итератора новый и влоденый
-//или записывать в новую мепу
