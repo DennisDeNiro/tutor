@@ -19,7 +19,7 @@ map.put("Balotelli", "Mario");
 map.put("Gotze", "Mario");
 map.put("Gomez", "Mario");
 */
-public class Test_03c {
+public class Test_02c {
     public static void main(String[] args) {
 
         Map<String, String> map1 = takeMap();

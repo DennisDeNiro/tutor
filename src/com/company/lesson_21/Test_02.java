@@ -43,10 +43,11 @@ public class Test_02 {
 
     private static int deleteName(Map<String, String> map) {
         Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+
         int count = 0;
         while (iterator.hasNext()) {
             Map.Entry<String, String> text = iterator.next();
-            if (text.getValue()==text.getValue()+1) {
+            if (text.getValue()==text.getValue()) {
                 iterator.remove();
             } else {
                 count++;
