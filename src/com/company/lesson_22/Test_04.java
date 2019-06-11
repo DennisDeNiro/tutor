@@ -14,26 +14,61 @@ import java.util.Set;
 */
 public class Test_04 {
     public static void main(String[] args) {
-        Cat cat = new Cat();
-        Dog dog = new Dog();
-//        removeCats();
-//        Set<String>set = set();
+
     }
 
     static class Cat {
+        private String name;
 
+        public Cat(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return "Cat{" +
+                    "name='" + name + '\'' +
+                    '}';
+        }
     }
 
     static class Dog {
+        private String name;
 
+        public Dog(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return "Dog{" +
+                    "name='" + name + '\'' +
+                    '}';
+        }
     }
 
-    private static Set<String> createCats() {
-        Set<String> set = new HashSet<>();
-        set.add("Мурзик");
-        set.add("Тзик");
-        set.add("Пузик");
-        set.add("Tузик");
+    private static Set<Cat> createCats() {
+        Set<Cat> set = new HashSet<>();
+        set.add(new Cat("Мурзик"));
+        set.add(new Cat("Тзик"));
+        set.add(new Cat("Пузик"));
+        set.add(new Cat("Tузик"));
         return set;
     }
 
@@ -44,27 +79,29 @@ public class Test_04 {
         set1.add("Пират");
         return set1;
     }
-
-    private static Set<String> set(Set set, Set set1) {
-        Set<Set> set2 = new HashSet<>();
-        set2.add(set);
-        set2.add(set1);
-        return set;
+// нужно вхять множество
+    private static Set<Object> set(Set<Cat> set, Set<Dog> set1) {
+        Set<Object> set2 = new HashSet<>();
+        set2.addAll(set);
+        set2.addAll(set1);
+        return set2;
     }
 
-    private static Set<String> removeCats(Set<String>set2){
-        Iterator<String>iterator = set2.iterator();
+    private static void removeCats(Set<Object> set2, Set<Cat> cats){
+        Iterator<Object>iterator = set2.iterator();
         while(iterator.hasNext()){
             if(set2.contains(createCats())){
                 set2.remove(createCats());
             }
         }
-        return set2;
+
+//        set2.removeAll(cats);
+}
+    private static void printPets(Set<Object> set2){
+        for (Object s : set2) {
+            System.out.println(s);
+        }
     }
-//    private static Set<String> printPets(Set<String>set2){
-//     Set<String>set = removeCats();
-//        return set;
-//    }
 }
 
 

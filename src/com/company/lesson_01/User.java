@@ -2,6 +2,8 @@ package com.company.lesson_01;
 // public protected default private
 //
 
+import java.util.Objects;
+
 public class User {
     public static int count = 40; // 4byte[]
     public int age = 30;          // 200 [25][35][5]
@@ -26,4 +28,14 @@ public class User {
         System.out.format("34577 50 %d %s %b %f", i, str, bool, f);
 
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return age == user.age;
+    }
+
+
 }
