@@ -16,7 +16,7 @@ public class Test_04 {
     public static void main(String[] args) {
         Cat cat = new Cat();
         Dog dog = new Dog();
-        removeCats(set());
+//        removeCats();
 //        Set<String>set = set();
     }
 
@@ -60,6 +60,10 @@ public class Test_04 {
             }
         }
         return set2;
+    }
+    private static Set<String> printPets(Set<String>set2){
+//        Set<String>set = removeCats();
+//        return set;
     }
 }
 
