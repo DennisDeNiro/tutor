@@ -61,10 +61,10 @@ public class Test_04 {
         }
         return set2;
     }
-    private static Set<String> printPets(Set<String>set2){
-//        Set<String>set = removeCats();
+//    private static Set<String> printPets(Set<String>set2){
+//     Set<String>set = removeCats();
 //        return set;
-    }
+//    }
 }
 
 
