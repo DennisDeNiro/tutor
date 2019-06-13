@@ -3,6 +3,8 @@ package com.company.lesson_24Exeption;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /* Метод в try..catch
 Вводить с клавиатуры числа. Код по чтению чисел с клавиатуры вынести в отдельный метод readData.
@@ -14,23 +16,22 @@ import java.io.InputStreamReader;
 */
 public class Test_02 {
     public static void main(String[] args) throws IOException {
-     readDate();
+        readDate();
     }
 
-    private static boolean readDate() throws IOException {
-        BufferedReader  bf =new BufferedReader(new InputStreamReader(System.in));
-        String a = bf.readLine();
-        while(true) {
-            try {
-                int number = Integer.parseInt(a);
-                if (number)
-                    return true;
-            } catch (Exception e) {
-                System.out.print("Ввелите число");
-                return false;
+    private static void readDate() throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        List<Integer> list = new ArrayList<>();
+
+        try {
+            while (true) {
+                int number = Integer.parseInt(bf.readLine());
+                list.add(number);
+            }
+        } catch (Exception e) {
+            for (Integer integer : list) {
+                System.out.println(integer);
             }
         }
-
     }
-
 }
