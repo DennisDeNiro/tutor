@@ -25,3 +25,6 @@ public class Test_02 {
     }
 }
 //filenotfoundExeption
+
+// все сдеалть в трай
+// inputStream =0 инициализируем перед обявляем в try
