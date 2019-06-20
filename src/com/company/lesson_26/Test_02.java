@@ -14,15 +14,22 @@ public class Test_02 {
         String inputFile = bf.readLine();
         String outputFile = bf.readLine();
 
-        try{
-
-        }catch (Exception e){
-            System.out.println("Програма скопирована");
-        }
         InputStream inputStream = new FileInputStream(inputFile);
         OutputStream outputStream = new FileOutputStream(outputFile);
+
+        try{
+            while(true){
+                if (inputStream.){
+
+                }
+            }
+        }catch (Exception e){
+            System.out.println("Файл не существует");
+        }
+
 
         inputStream.close();
         outputStream.close();
     }
 }
+//filenotfoundExeption
