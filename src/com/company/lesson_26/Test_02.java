@@ -14,14 +14,14 @@ public class Test_02 {
         while (true) {
             try {
                 String inputFile = bf.readLine();
-                String outputFile = bf.readLine();
                 InputStream inputStream = new FileInputStream(inputFile);
-                OutputStream outputStream = new FileOutputStream(outputFile);
+
             } catch (Exception e) {
                 System.out.println("Файл не существует");
             }
+            String outputFile = bf.readLine();
+            OutputStream outputStream = new FileOutputStream(outputFile);
         }
-
     }
 }
 //filenotfoundExeption
