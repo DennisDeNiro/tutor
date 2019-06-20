@@ -8,8 +8,8 @@ NumberFormatException
 Можно использовать только один блок try..
 */
 public class Test_01 {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+        processExeption();
     }
 
     private static void processExeption() throws Exception{
@@ -22,11 +22,12 @@ public class Test_01 {
             new NumberFormatException();
         }
     }
+
     private static void printStack(){
         try{
-
+            throw new Exception();
         }catch (Exception e){
-
+            System.out.println("Exept");
         }
     }
 }
