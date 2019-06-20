@@ -11,25 +11,24 @@ public class Test_02 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        String inputFile = bf.readLine();
-        String outputFile = bf.readLine();
-
-        InputStream inputStream = new FileInputStream(inputFile);
-        OutputStream outputStream = new FileOutputStream(outputFile);
-
-        try{
-            while(true){
-                if (inputStream.){
-
+        try {
+            while (true) {
+                String inputFile = bf.readLine();
+                InputStream inputStream = new FileInputStream(inputFile);
+                if (inputFile.isEmpty()) {
+                    break;
+                } else {
+                    continue;
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Файл не существует");
         }
+        String outputFile = bf.readLine();
+
+        OutputStream outputStream = new FileOutputStream(outputFile);
 
 
-        inputStream.close();
-        outputStream.close();
     }
 }
 //filenotfoundExeption
