@@ -3,8 +3,8 @@ package com.company.lesson_26;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /* Одинаковые слова в списке
 Ввести с клавиатуры в список 5 слов. Нужно подсчитать количество одинаковых слов в списке.
@@ -18,15 +18,17 @@ public class Test_01 {
 
     }
 
-    private static String entryMAp() throws IOException {
+    private static List<String> entryMAp() throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        Map<String, Integer> map = new HashMap<>();
-        while (true) {
-            String name = bf.readLine();
-            String s = bf.readLine();
-            int i = Integer.parseInt(s);
-            map.put(name,i);
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            list.add(bf.readLine());
         }
+        return list;
+    }
+
+    private static List<String> takeUnique(List<String>list){
+
     }
 
 
