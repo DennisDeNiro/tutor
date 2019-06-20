@@ -25,7 +25,7 @@ public class Test_01 {
             String name = bf.readLine();
             String s = bf.readLine();
             int i = Integer.parseInt(s);
-            return s;
+            map.put(name,i);
         }
     }
 
