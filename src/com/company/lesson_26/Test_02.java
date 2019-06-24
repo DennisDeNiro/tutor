@@ -11,20 +11,29 @@ public class Test_02 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        while (true) {
-            try {
-                String inputFile = bf.readLine();
-                InputStream inputStream = new FileInputStream(inputFile);
+        String inputFile = bf.readLine();
 
-            } catch (Exception e) {
-                System.out.println("Файл не существует");
-            }
-            String outputFile = bf.readLine();
-            OutputStream outputStream = new FileOutputStream(outputFile);
+        String outputFile = bf.readLine();
+        InputStream inputStream = null;
+        try {
+            inputStream = new FileInputStream(inputFile);
+        } catch (Exception e) {
+            System.out.println("Файл не существует");
+            inputFile = bf.readLine();
+            inputStream = new FileInputStream(inputFile);
         }
+        OutputStream outputStream = new FileOutputStream(outputFile);
+        while(inputStream.available()>0){
+            int data = inputStream.read();
+            outputStream.write(data);
+        }
+        inputStream.close();
+        outputStream.close();
     }
 }
+
 //filenotfoundExeption
 
 // все сдеалть в трай
 // inputStream =0 инициализируем перед обявляем в try
+//реалиховать outputstream

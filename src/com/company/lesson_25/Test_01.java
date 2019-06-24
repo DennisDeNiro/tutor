@@ -9,25 +9,23 @@ NumberFormatException
 */
 public class Test_01 {
     public static void main(String[] args) throws Exception {
-        processExeption();
+
     }
 
-    private static void processExeption() throws Exception{
-        int a  = (int) (Math.random()*3);
-        if (a==0){
-            new NullPointerException();
-        }if(a==1){
-            new IndexOutOfBoundsException();
-        }if(a==2){
-            new NumberFormatException();
-        }
+//    private static String  processExeption(){
+//        try{
+//
+//        }catch (Exception e){
+//
+//        }
+//    }
+    private void method(){
+        throw new NullPointerException();
     }
-
-    private static void printStack(){
-        try{
-            throw new Exception();
-        }catch (Exception e){
-            System.out.println("Exept");
-        }
+    private void method1(){
+        throw new IndexOutOfBoundsException();
+    }
+    private void method2(){
+        throw new NumberFormatException();
     }
 }
