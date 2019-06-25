@@ -1,5 +1,8 @@
 package com.company.lesson_27_OOP;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test_02 {
     public static void main(String[] args) {
         Cat cat = new Cat("Cat1", 2, 12);
@@ -8,6 +11,11 @@ public class Test_02 {
         Animal dog = new Animal("Dog1", 3);
         dog.printName();
 
+        Animal dog1 = new Dog("Dog2", 4);
+        dog1.printName();
+
+        List<String> list = new ArrayList<>();
+        list.add("text");
     }
 }
 
@@ -55,8 +63,14 @@ class Cat extends Animal{
     }
 }
 
-class Dog extends Animal{
+class Tiger extends Cat{
 
+    public Tiger(String name, int age, int tailLength) {
+        super(name, age, tailLength);
+    }
+}
+
+class Dog extends Animal{
     public Dog(String name, int age) {
         super(name, age);
     }
