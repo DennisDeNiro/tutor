@@ -17,12 +17,13 @@ String abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя
 …
 я 9
 */
+// TODO: 25.06.2019  
 public class Test_03 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 1; i++) {
             String st = bf.readLine();
             list.add(st);
         }

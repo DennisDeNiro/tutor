@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Map;
 
 /*
 Написать программу, которая вводит с клавиатуры строку текста.
@@ -28,13 +30,10 @@ public class Test_02 {
         ArrayList list2 = new ArrayList<Character>();
 
         for (int i = 0; i < tochar.length; i++) {
-            if (isVovels(tochar[i]) == true) {
+            if (isVovels(tochar[i])) {
                 list.add(tochar[i]);
-
             } else {
-                if (tochar[i] == ' ') {
-
-                } else {
+                if (tochar[i] != ' ') {
                     list2.add(tochar[i]);
                 }
             }

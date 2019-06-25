@@ -9,16 +9,22 @@ NumberFormatException
 */
 public class Test_01 {
     public static void main(String[] args) throws Exception {
-
+        processExeption(new Test_01());
     }
 
-//    private static String  processExeption(){
-//        try{
-//
-//        }catch (Exception e){
-//
-//        }
-//    }
+    private static void processExeption(Test_01 obj){
+        try{
+            obj.method1();
+            obj.method();
+            obj.method2();
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        } catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        } catch (NumberFormatException e){
+            e.printStackTrace();
+        }
+    }
     private void method(){
         throw new NullPointerException();
     }
@@ -29,3 +35,6 @@ public class Test_01 {
         throw new NumberFormatException();
     }
 }
+
+//print stacktrace
+

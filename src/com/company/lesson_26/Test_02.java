@@ -19,10 +19,9 @@ public class Test_02 {
             inputStream = new FileInputStream(inputFile);
         } catch (Exception e) {
             System.out.println("Файл не существует");
-            inputFile = bf.readLine();
-            inputStream = new FileInputStream(inputFile);
         }
         OutputStream outputStream = new FileOutputStream(outputFile);
+
         while(inputStream.available()>0){
             int data = inputStream.read();
             outputStream.write(data);
