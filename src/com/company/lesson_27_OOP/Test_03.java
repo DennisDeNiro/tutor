@@ -15,6 +15,8 @@ public class Test_03 {
     public static void main(String[] args) {
         Horse horse = new Horse("ada", false, false);
         Pegas pegas = new Pegas("asd", true, true);
+        horse.fly();
+        pegas.fly();
     }
 }
 
@@ -31,6 +33,10 @@ class Horse {
         this.flyable = flyable;
         this.runnable = runnable;
     }
+
+    public void fly(){
+        System.out.println("I can fly " + flyable);
+    }
 }
 
 class Pegas extends Horse {
@@ -42,7 +48,5 @@ class Pegas extends Horse {
         super(name, flyable, runnable);
     }
 
-    public void fly() {
-        System.out.println("I can fly" + this.fly(););
-    }
+
 }
