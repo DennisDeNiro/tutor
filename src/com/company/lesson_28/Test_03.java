@@ -5,9 +5,9 @@ package com.company.lesson_28;
 public class Test_03 {
     public static void main(String[] args) {
         method(new Cat1());
-        method(new Bird());
-        method(new Lamp());
-        method(new Dog1());
+//        method(new Bird());
+//        method(new Lamp());
+//        method(new Dog1());
     }
 
     private static void method(Object o){
@@ -22,6 +22,7 @@ public class Test_03 {
         }
     }
 }
+
 
 class Cat1{}
 class Bird{}
