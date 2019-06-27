@@ -64,3 +64,9 @@ class Fish extends WhaterAnimal{
 
     }
 }
+
+interface Flyable{
+    public static final String s = "t";
+
+    public abstract void m();
+}
