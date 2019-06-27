@@ -12,34 +12,27 @@ public class Test_01 {
         pet.getChild();
         cat.getChild();
         dog.getChild();
-
     }
 }
 
 class Pet{
-
-
-    public String getChild() {
-        return getChild();
+    public Pet getChild() {
+        return new Pet();
     }
 }
 
 class Cat extends Pet{
 
-
     @Override
-    public String getChild() {
-        System.out.println("Кошка");
-        return this.getChild();
+    public Cat getChild() {
+        return new Cat();
     }
 }
 
 class Dog extends Pet{
-    private String name;
 
     @Override
-    public String getChild() {
-        System.out.println("Собака");
-        return this.getChild();
+    public Dog getChild() {
+        return new Dog();
     }
 }
