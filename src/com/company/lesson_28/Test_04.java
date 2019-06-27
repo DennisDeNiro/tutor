@@ -65,8 +65,25 @@ class Fish extends WhaterAnimal{
     }
 }
 
-interface Flyable{
+interface IMain{
+
+}
+
+interface Flyable extends IMain{
     public static final String s = "t";
 
-    public abstract void m();
+    public abstract void fly();
+}
+
+class Bird1 extends Animal implements Flyable {
+
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void printName() {
+
+    }
 }
