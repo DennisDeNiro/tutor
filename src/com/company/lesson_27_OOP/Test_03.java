@@ -13,8 +13,8 @@ package com.company.lesson_27_OOP;
 */
 public class Test_03 {
     public static void main(String[] args) {
-        Horse horse = new Horse("ada", false, false);
-        Pegas pegas = new Pegas("asd", true, true);
+        Horse horse = new Horse("Horse", false, false);
+        Pegas pegas = new Pegas("Pegas", true, true);
         horse.fly();
         pegas.fly();
     }
@@ -34,9 +34,16 @@ class Horse {
         this.runnable = runnable;
     }
 
-    public void fly(){
-        System.out.println("I can fly " + flyable);
+    public void fly() {
+        if (flyable == true) {
+            System.out.println(name + " I can fly " + flyable);
+        } else {
+            System.out.println(name + " I can't fly " + flyable);
+        }
+
     }
+
+
 }
 
 class Pegas extends Horse {
