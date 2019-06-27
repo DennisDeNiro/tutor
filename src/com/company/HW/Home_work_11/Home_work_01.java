@@ -8,7 +8,6 @@ package com.company.HW.Home_work_11;
 public class Home_work_01 {
     public static void main(String[] args) {
         Cat cat = new Cat();
-
     }
 }
 
