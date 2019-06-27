@@ -9,27 +9,28 @@ public class Test_01 {
         Pet pet = new Pet();
         Cat cat = new Cat();
         Dog dog = new Dog();
-        pet.getName();
-        cat.getName();
-        dog.getName();
+        pet.getChild();
+        cat.getChild();
+        dog.getChild();
+
     }
 }
 
 class Pet{
-    private String name;
 
-    public String getName() {
-        return name;
+
+    public String getChild() {
+        return getChild();
     }
 }
 
 class Cat extends Pet{
-    private String name;
+
 
     @Override
-    public String getName() {
+    public String getChild() {
         System.out.println("Кошка");
-        return name;
+        return this.getChild();
     }
 }
 
@@ -37,8 +38,8 @@ class Dog extends Pet{
     private String name;
 
     @Override
-    public String getName() {
+    public String getChild() {
         System.out.println("Собака");
-        return name;
+        return this.getChild();
     }
 }
