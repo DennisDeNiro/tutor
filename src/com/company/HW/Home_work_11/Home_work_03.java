@@ -25,9 +25,9 @@ class Cow{
     public String getName() {
         System.out.println("Я - корова");
         return name;
-
     }
 }
+
 class Whale extends Cow{
     private String name;
 
