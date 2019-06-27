@@ -35,15 +35,12 @@ class Horse {
     }
 
     public void fly() {
-        if (flyable == true) {
+        if (flyable) {
             System.out.println(name + " I can fly " + flyable);
         } else {
             System.out.println(name + " I can't fly " + flyable);
         }
-
     }
-
-
 }
 
 class Pegas extends Horse {
@@ -54,6 +51,5 @@ class Pegas extends Horse {
     public Pegas(String name, boolean flyable, boolean runnable) {
         super(name, flyable, runnable);
     }
-
 
 }
