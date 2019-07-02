@@ -9,7 +9,7 @@ public class Test_05 {
 
     }
 }
-
+//
  interface Fly {
     public void fly();
  }

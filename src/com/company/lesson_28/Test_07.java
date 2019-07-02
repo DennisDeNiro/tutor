@@ -5,21 +5,26 @@ package com.company.lesson_28;
 «Я - кот».
 */
 public class Test_07 {
+    public static void main(String[] args) {
+        Pet1 cat = new Cat2();
+        System.out.println(cat.getName());
+
+    }
 }
 
 class Pet1{
-    private String name;
+    public String name;
 
-    public Pet1 getName(){
-        System.out.println("Я пушистик");
-        return new Pet1();
+    public String getName(){
+        name = "Я пушистик";
+        return name;
     }
 }
 
 class Cat2 extends Pet1{
     @Override
-    public Cat2 getName() {
-        System.out.println("Я - кот");
-        return new Cat2();
+    public String getName(){
+        name = "Я - кот";
+        return name;
     }
 }
