@@ -10,14 +10,12 @@ package com.company.lesson_29;
 */
 public class Test_03 {
     public static void main(String[] args) {
-        User user = new User();
-        user.initializeIdAndName(12,"Asd");
-        user.toString();
+
     }
 }
 
 interface DBObject {
-    String initializeIdAndName(long id, String name);
+    User initializeIdAndName(long id, String name);
 }
 
 class User implements DBObject {
@@ -25,17 +23,21 @@ class User implements DBObject {
     private String name;
 
     @Override
-    public String initializeIdAndName(long id, String name) {
-        return this.initializeIdAndName(id, name);
+    public User initializeIdAndName(long id, String name) {
+        id = this.id;
+        name = this.name;
+        return this;
     }
 
     @Override
     public String toString() {
-        return String.format("User has name" +  %s, id = %d);
+        return String.format("User has name " + "%s", id = "%d");
     }
 }
 
-class Matrix extends User implements DBObject{
-    User user1 = new User();
-    User user2 = new User();
+class Matrix extends User implements DBObject {
+    User user = new Matrix();
+    User user1 = new Matrix();
+
+
 }
