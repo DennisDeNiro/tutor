@@ -10,7 +10,9 @@ package com.company.lesson_29;
 */
 public class Test_03 {
     public static void main(String[] args) {
-
+        User user = new User();
+        user.initializeIdAndName(12,"Asd");
+        user.toString();
     }
 }
 
@@ -24,17 +26,18 @@ class User implements DBObject {
 
     @Override
     public String initializeIdAndName(long id, String name) {
-        return initializeIdAndName();
+        return this.initializeIdAndName(id, name);
     }
 
     @Override
     public String toString() {
-        String.format("User has:" + name + %s, id = %d);
+        String.format("User has name" %s, id = %d);
         return toString();
     }
 }
 
 class Matrix extends User implements DBObject{
-    User user = new User();
+    User user1 = new User();
     User user2 = new User();
+
 }
