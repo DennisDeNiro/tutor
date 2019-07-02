@@ -24,14 +24,13 @@ class User implements DBObject {
 
     @Override
     public String initializeIdAndName(long id, String name) {
-        return id + name;
+        return new User;
     }
 
     @Override
     public String toString() {
-        System.out.format("User has: name" + %s, id = %d);
-        String format = "User has name" + "id" = id, "name" = name;
-        return format;
+        String.format("User has: name" + %s, id = %d);
+        return toString();
     }
 }
 
