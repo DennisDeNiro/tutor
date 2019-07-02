@@ -9,15 +9,17 @@ package com.company.lesson_29;
 public class Test_02 {
     public static void main(String[] args) {
           Drink1 drink1 = new Cola();
-       print(drink1);
+          Drink1 drink2 = new Beer();
+          print(drink1);
+          print(drink2);
     }
+
     private static void print(Drink1 d){
         if (d.isAlcoholic()){
-            System.out.println("Алкогольный напиток");
+            System.out.println(d.getClass().getSimpleName() + " - aлкогольный напиток");
         }else{
-            System.out.println("Без алкогольный");
+            System.out.println(d.getClass().getSimpleName() + " - bезалкогольный");
         }
-
     }
 }
 
