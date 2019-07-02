@@ -21,13 +21,13 @@ class AlcoholicBeer implements Drink{
     @Override
     public boolean isAlcoholic() {
 
-        return false;
+        return true;
     }
 
     @Override
     public String toString() {
         String alcoholic = "";
-        alcoholic += " " + ((isAlcoholic() ? "алко" : "не алко");
+        alcoholic += " " + ((isAlcoholic() ? "алко" : "не алко"));
         return alcoholic;
     }
 }
