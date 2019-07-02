@@ -10,17 +10,56 @@ public class Test_05 {
     }
 }
 
- interface class Fly{
+ interface Fly {
+    public void fly();
+ }
+ interface Move{
+    public void move();
+}
+ interface Eat{
+    public void eat();
 
 }
- interface class Move{
 
+class Dog2 implements Eat, Move{
+    @Override
+    public void move() {
+
+    }
+
+    @Override
+    public void eat() {
+
+    }
 }
- abstract class Eat{
 
+class Car implements Move{
+    @Override
+    public void move() {
+
+    }
 }
 
-class Dog2{}
-class Car{}
-class Duck{}
-class Airplane{}
+class Duck implements Fly,Eat{
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void eat() {
+
+    }
+}
+
+class Airplane implements Fly,Move{
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void move() {
+
+    }
+}
