@@ -27,7 +27,7 @@ class AlcoholicBeer implements Drink{
     @Override
     public String toString() {
         String alcoholic = "";
-        alcoholic += " " + ((isAlcoholic() ? "алко": "не алко");
+        alcoholic += " " + ((isAlcoholic() ? true: false);
         return alcoholic;
     }
 }
