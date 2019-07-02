@@ -21,7 +21,7 @@ class AlcoholicBeer implements Drink{
     @Override
     public boolean isAlcoholic() {
 
-        return false;
+        return true;
     }
 
     @Override
