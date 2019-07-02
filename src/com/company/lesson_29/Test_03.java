@@ -31,13 +31,11 @@ class User implements DBObject {
 
     @Override
     public String toString() {
-        String.format("User has name" %s, id = %d);
-        return toString();
+        return String.format("User has name" +  %s, id = %d);
     }
 }
 
 class Matrix extends User implements DBObject{
     User user1 = new User();
     User user2 = new User();
-
 }
