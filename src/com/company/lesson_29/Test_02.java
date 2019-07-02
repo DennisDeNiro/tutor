@@ -8,8 +8,8 @@ package com.company.lesson_29;
 */
 public class Test_02 {
     public static void main(String[] args) {
-          Drink1 drink1 =new Cola();
-        System.out.println(print());
+          Drink1 drink1 = new Cola();
+       print(drink1);
     }
     private static void print(Drink1 d){
         if (d.isAlcoholic()){
