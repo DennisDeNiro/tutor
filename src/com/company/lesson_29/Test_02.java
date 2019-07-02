@@ -9,7 +9,13 @@ package com.company.lesson_29;
 public class Test_02 {
     public static void main(String[] args) {
 
-
+    }
+    private static void print(Object o){
+        if (o instanceof Cola){
+            System.out.println("Без алкоголтный");
+        }if (o instanceof Beer){
+            System.out.println("Алкогольный");
+        }
     }
 }
 
@@ -23,11 +29,6 @@ class Cola implements Drink1{
         return false;
     }
 
-    public boolean print(){
-        if(isAlcoholic()){
-            System.out.println("Без алкогольный");
-        }
-    }
 }
 
 class Beer implements Drink1{
@@ -36,9 +37,4 @@ class Beer implements Drink1{
         return true;
     }
 
-    public boolean print(){
-        if (isAlcoholic()){
-            System.out.println("Алкогольный");
-        }
-    }
 }
