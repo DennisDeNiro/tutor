@@ -8,14 +8,16 @@ package com.company.lesson_29;
 */
 public class Test_02 {
     public static void main(String[] args) {
-
+          Drink1 drink1 =new Cola();
+        System.out.println(print());
     }
-    private static void print(Object o){
-        if (o instanceof Cola){
-            System.out.println("Без алкоголтный");
-        }if (o instanceof Beer){
-            System.out.println("Алкогольный");
+    private static void print(Drink1 d){
+        if (d.isAlcoholic()){
+            System.out.println("Алкогольный напиток");
+        }else{
+            System.out.println("Без алкогольный");
         }
+
     }
 }
 
@@ -28,7 +30,6 @@ class Cola implements Drink1{
     public boolean isAlcoholic() {
         return false;
     }
-
 }
 
 class Beer implements Drink1{
@@ -36,5 +37,4 @@ class Beer implements Drink1{
     public boolean isAlcoholic() {
         return true;
     }
-
 }
