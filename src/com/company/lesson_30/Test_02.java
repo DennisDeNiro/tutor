@@ -12,11 +12,13 @@ public class Test_02 {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         String text = bf.readLine();
-        InputStream inputStream = new FileInputStream(text);
-        String exit = "exit";
-        while (inputStream.available()>0){
-            System.out.println((char) inputStream.read());
-            if (inputStream = )
+        OutputStream outputStream = new FileOutputStream(text);
+        while (true){
+            String s = bf.readLine();
+            if(s.equals("exit")){
+                break;
+            }
+                outputStream.write((s + "\r\n").getBytes());
         }
     }
 }
