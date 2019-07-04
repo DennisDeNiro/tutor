@@ -47,7 +47,7 @@ class Person implements RepkaItem {
         return namePadezh;
     }
 
-    public String pull(Person person) {
+    public String pull(List<Person> person) {
         return String.format(name + " за " + namePadezh);
     }
 }
@@ -55,7 +55,7 @@ class Person implements RepkaItem {
 class RepkaStory {
     public static void tell(List<Person> plot) {
         for (int i = 0; i < plot.size(); i++) {
-            System.out.println(plot);
+            System.out.println(plot.get(i).pull(plot));
         }
     }
 }
