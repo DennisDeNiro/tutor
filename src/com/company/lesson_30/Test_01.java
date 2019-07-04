@@ -14,9 +14,8 @@ public class Test_01 {
 
         String firstFile = bf.readLine();
         InputStream inputStream = new FileInputStream(firstFile);
-        while (firstFile != null){
-            System.out.println(firstFile);
-            firstFile = bf.readLine();
+        while (inputStream.available() > 0){
+            System.out.print((char)inputStream.read());
         }
         inputStream.close();
     }
