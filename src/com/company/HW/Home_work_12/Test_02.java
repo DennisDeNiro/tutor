@@ -9,31 +9,44 @@ package com.company.HW.Home_work_12;
 */
 public class Test_02 {
     public static void main(String[] args) {
-        Today td = new Today();
-        td.toString();
+        Today td = new Today(WeatherType.WEATHER_TYPE_RAIN);
+        System.out.println(td);
+
+        Today td1 = new Today();
+        td1.setType(WeatherType.WEATHER_TYPE_SUN);
+        System.out.println(td1);
     }
 }
 
 interface Weather {
-    void getWeatherType();
+    String getWeatherType();
 }
 
 interface WeatherType{
-   String weatherTypeWinter = "Snow";
-   String weatherTypeSun = "Sun";
-   String weahterTypeRain = "Rain";
+   public final static String WEATHER_TYPE_WINTER = "Snow";
+   String WEATHER_TYPE_SUN = "Sun";
+   String WEATHER_TYPE_RAIN = "Rain";
 }
 
 class Today implements Weather{
-    public String type;
-
-    @Override
-    public void getWeatherType() {
+    private String type;
+    public Today() {
+    }
+    public Today(String type) {
         this.type = type;
     }
 
     @Override
-    public String toString() {
-        return String.format("%s+ for today",type);
+    public String getWeatherType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s for today", getWeatherType());
     }
 }
