@@ -13,15 +13,11 @@ public class Test_01 {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         String firstFile = bf.readLine();
-        String secondFile = bf.readLine();
-
         InputStream inputStream = new FileInputStream(firstFile);
-        OutputStream outputStream = new FileOutputStream(secondFile);
-
-        while (inputStream.available()>0){
-            int data = inputStream.read();
-            outputStream.write(data);
+        while (firstFile != null){
+            System.out.println(firstFile);
+            firstFile = bf.readLine();
         }
-        System.out.println(secondFile.);
+        inputStream.close();
     }
 }
