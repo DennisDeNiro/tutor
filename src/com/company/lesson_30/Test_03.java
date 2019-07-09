@@ -18,6 +18,7 @@ package com.company.lesson_30;
         RepkaStory.tell(plot);
 */
 
+import javax.rmi.CORBA.Util;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -47,16 +48,20 @@ class Person implements RepkaItem {
         return namePadezh;
     }
 
-    public String pull(List<Person> person) {
+    public String pull(Person person) { // должен проходить не список
         return String.format(name + " за " + namePadezh);
     }
 }
 
 class RepkaStory {
     public static void tell(List<Person> plot) {
-        for (int i = 0; i < plot.size(); i++) {
-            System.out.println(plot.get(i).pull(plot));
+        for (element: plot){
+            System.out.println(plot);
         }
+
+        //        for (int i = 0; i < plot.size(); i++) {
+//            System.out.println(plot.get(i));
+//        }
     }
 }
 
