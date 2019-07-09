@@ -48,20 +48,16 @@ class Person implements RepkaItem {
         return namePadezh;
     }
 
-    public String pull(Person person) { // должен проходить не список
-        return String.format(name + " за " + namePadezh);
+    public String pull(Person person) {
+        return String.format(person.name + "за" + person.getNamePadezh());
     }
 }
 
 class RepkaStory {
     public static void tell(List<Person> plot) {
-        for (element: plot){
-            System.out.println(plot);
+                for (int i = 0; i < plot.size(); i++) {
+                    System.out.println(plot.get(i));
         }
-
-        //        for (int i = 0; i < plot.size(); i++) {
-//            System.out.println(plot.get(i));
-//        }
     }
 }
 
