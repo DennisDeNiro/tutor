@@ -43,21 +43,24 @@ class Person implements RepkaItem {
         this.namePadezh = namePadezh;
     }
 
+
+
     @Override
     public String getNamePadezh() {
         return namePadezh;
     }
 
     public String pull(Person person) {
-        return String.format(person.name + "за" + person.getNamePadezh());
+        return String.format(this.name + " за " + person.getNamePadezh());
     }
 }
 
 class RepkaStory {
     public static void tell(List<Person> plot) {
                 for (int i = 0; i < plot.size(); i++) {
-                    System.out.println(plot.get(i));
+                    System.out.println(plot.get(i).getNamePadezh());
         }
+
     }
 }
 
