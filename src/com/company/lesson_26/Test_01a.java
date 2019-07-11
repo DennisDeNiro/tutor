@@ -3,10 +3,7 @@ package com.company.lesson_26;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /* Одинаковые слова в списке
 Ввести с клавиатуры в список 5 слов. Нужно подсчитать количество одинаковых слов в списке.
@@ -15,9 +12,14 @@ import java.util.Map;
 Вывести содержимое словаря на экран.
 В тестах регистр (большая/маленькая буква) влияет на результат.
 */
-public class Test_01a {
-    public static void main(String[] args) {
 
+//нужно булет еще проработать
+public class Test_01a {
+    public static void main(String[] args) throws IOException {
+        Map<String, Integer> map = takeMap(fillMap());
+        for (Map.Entry<String,Integer>entry: map.entrySet()){
+            System.out.println(entry);
+        }
     }
 
     private static List<String> fillMap() throws IOException {
@@ -31,9 +33,16 @@ public class Test_01a {
     }
 
     private static Map<String, Integer> takeMap(List<String> list) {
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> result = new HashMap<>();
+        for (String s : list) {
+            Integer oldCount = result.get(s);
+            if (oldCount == null) {
+                oldCount = 0;
+            }
+            result.put(s, oldCount + 1);
+        }
 
-        return map;
+        return result;
     }
 
 }

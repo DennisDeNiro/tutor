@@ -44,7 +44,6 @@ class Person implements RepkaItem {
     }
 
 
-
     @Override
     public String getNamePadezh() {
         return namePadezh;
@@ -57,10 +56,9 @@ class Person implements RepkaItem {
 
 class RepkaStory {
     public static void tell(List<Person> plot) {
-                for (int i = 0; i < plot.size(); i++) {
-                    System.out.println(plot.get(i).getNamePadezh());
+        for (int i = plot.size() - 1; i > 0; i--) {
+            System.out.println(plot.get(i).pull(plot.get(i - 1)));
         }
-
     }
 }
 
