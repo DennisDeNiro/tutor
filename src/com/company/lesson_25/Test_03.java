@@ -17,13 +17,13 @@ String abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя
 …
 я 9
 */
-// TODO: 25.06.2019  
+// TODO: 11.07.2019
 public class Test_03 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 4; i++) {
             String st = bf.readLine();
             list.add(st);
         }
@@ -35,18 +35,24 @@ public class Test_03 {
         }
         int abccount = 0;
 
-        for (char x : list1) { //перебираем алфавит к char x
-            for (String s : list) {// идем по строке и записываем каждую букву в s
-                for (char z : s.toCharArray()) {// раскладываем строку в буквенный массив и присваеваем каждую букву в переменную char z
-                    if (x == z) {
-                        abccount++;
-                    }
-                }
-                System.out.println(x + " " + abccount);
-                abccount = 0;
+
+            for (list : list1){
+
             }
 
-        }
+
+//        for (char x : list1) { //перебираем алфавит к char x
+//            for (String s : list) {// идем по строке и записываем каждую букву в s
+//                for (char z : s.toCharArray()) {// раскладываем строку в буквенный массив и присваеваем каждую букву в переменную char z
+//                    if (x == z) {
+//                        abccount++;
+//                    }
+//                }
+//                System.out.println(x + " " + abccount);
+//                abccount = 0;
+//            }
+//
+//        }
 
     }
 }

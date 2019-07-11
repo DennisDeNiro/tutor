@@ -13,7 +13,7 @@ import java.util.*;
 В тестах регистр (большая/маленькая буква) влияет на результат.
 */
 
-//нужно булет еще проработать
+//нужно булет еще проработать(сплит)
 public class Test_01a {
     public static void main(String[] args) throws IOException {
         Map<String, Integer> map = takeMap(fillMap());
