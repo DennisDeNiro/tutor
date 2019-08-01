@@ -41,8 +41,8 @@ public class Test_01a {
             }
             result.put(s, oldCount + 1);
         }
-
         return result;
     }
-
 }
+//сделать через Entry map
+// или с двумя форами

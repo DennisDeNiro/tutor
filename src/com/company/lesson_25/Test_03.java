@@ -33,12 +33,19 @@ public class Test_03 {
         for (int i = 0; i < chars.length; i++) {
             list1.add(chars[i]);
         }
-        int abccount = 0;
 
 
-            for (list : list1){
-
+        for (Character ch : list1) {
+            int count = 0;
+            for (String st : list) {
+                for (int i = 0; i < st.length(); i++) {
+                    if (st.charAt(i) == ch) {
+                        count++;
+                    }
+                }
             }
+            System.out.println(count + " " + ch);
+        }
 
 
 //        for (char x : list1) { //перебираем алфавит к char x
