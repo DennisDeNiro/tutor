@@ -36,10 +36,10 @@ import com.sun.xml.internal.ws.wsdl.writer.document.soap.Body;
 //
 //class BodyPart{
 //    private String bodyPart;
-//    public final static BodyPart HAND = new BodyPart("Hand");
-//    public  final static BodyPart LEG = new BodyPart("Leg");
+//    public final static BodyPart HAND = new BodyPart("HAND");
+//    public  final static BodyPart LEG = new BodyPart("LEG");
 //    public final static BodyPart GOLOVA = new BodyPart("Golova");
-//    public final static BodyPart BODY = new BodyPart("Body");
+//    public final static BodyPart BODY = new BodyPart("BODY");
 //
 //
 //    public BodyPart(String bodyPart) {

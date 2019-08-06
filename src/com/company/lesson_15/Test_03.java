@@ -23,6 +23,17 @@ import java.util.Map;
 */
 // TODO: 14.05.2019  
 public class Test_03 {
+
+//    private static int a;
+//    static {
+//        a = 10;
+//    }
+//
+//    private int b;
+//    {
+//        b = 10;
+//    }
+
     public static void main(String[] args) throws IOException {
         for (String arg : doubleValues(EnterLetter())) {
             System.out.println(arg);
