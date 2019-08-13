@@ -1,12 +1,8 @@
-package lesson_32;
+package com.company.lesson_32;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 /*
 1. Создать классы CatFactory, Cat, MaleCat, FemaleCat
