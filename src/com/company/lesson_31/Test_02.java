@@ -1,5 +1,9 @@
 package com.company.lesson_31;
 
+import java.lang.ref.PhantomReference;
+import java.lang.ref.SoftReference;
+import java.lang.ref.WeakReference;
+
 /* Битва роботов
 1. Создать класс Robot, BodyPart интерфейсы Attackable,Defensable и абстрактный класс AbstractRobot
 2. В классе BodyPart создать переменную String bodyPart; добавить 4 объекта - части тела ( рука, нога, голова, грудь).
@@ -16,8 +20,8 @@ package com.company.lesson_31;
 */
 public class Test_02 {
     public static void main(String[] args) {
-        Robot robot = new Robot("Vs");
-        Robot robot1 = new Robot("sse");
+        Robot robot = new Robot("Vs",22,50);
+        Robot robot1 = new Robot("ss",33,43);
 
         doMove(robot, robot1);
         doMove(robot1, robot);
@@ -26,27 +30,24 @@ public class Test_02 {
         doMove(robot, robot1);
         doMove(robot1, robot);
     }
+
 
     public static void doMove(AbstractRobot robotFirst, AbstractRobot robotSecond) {
-        System.out.println(String.format("%s атаковал робота %s, атакована %s, защищена %s", robotFirst.toString()
-                , robotSecond.toString(), robotFirst.attack(), robotSecond.defense(), robotFirst.power(), robotSecond.power()
-                , robotFirst.hellspoint(),robotSecond.hellspoint()));
-    }
+        System.out.println(String.format("%s атаковал робота %s, атакована %s, защищена %s, сил отнято %s, жизни робота %s"
+                , robotFirst.toString(), robotSecond.toString(), robotFirst.attack(), robotSecond.defense()
+                , robotSecond.hellspoint(), robotFirst.power()));
+//        if (robotFirst.attack() == robotSecond.defense()) {
+//            System.out.println("урон не нанесен");
+//        } else {
+//            System.out.println(robotSecond.defense() + " % " + "урона нанесено");
+//        }
+//        System.out.println("жизни робота " + robotFirst.power() + " = " + robotFirst.hellspoint() + " - " + robotSecond.hellspoint());
+//    }
 }
 
 class Robot extends AbstractRobot {
-    public Robot(String name) {
-        super(name);
-    }
-
-    @Override
-    public Hellspoint hellspoint() {
-        return super.hellspoint();
-    }
-
-    @Override
-    public Power power() {
-        return super.power();
+    public Robot(String name, int power, int hellspoint) {
+        super(name, power, hellspoint);
     }
 }
 
@@ -76,26 +77,24 @@ interface Defensable {
 }
 
 interface Power {
-    Power power();
+    BodyPart power();
 }
 
 interface Hellspoint {
-    Hellspoint hellspoint();
+    BodyPart hellspoint();
 }
 
 abstract class AbstractRobot implements Attackable, Defensable, Power, Hellspoint {
-    private String name;
     private static int hitCount;
-    private static int power;
-    private static int hellspoint;
 
+    private String name;
+    private int power;
+    private int hellspoint;
 
-    public AbstractRobot(String name) {
+    public AbstractRobot(String name, int power, int hellspoint) {
         this.name = name;
-    }
-
-    public AbstractRobot(int power) {
         this.power = power;
+        this.hellspoint = hellspoint;
     }
 
     public String getName() {
@@ -106,28 +105,28 @@ abstract class AbstractRobot implements Attackable, Defensable, Power, Hellspoin
         this.name = name;
     }
 
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public int getHellspoint() {
+        return hellspoint;
+    }
+
+    public void setHellspoint(int hellspoint) {
+        this.hellspoint = hellspoint;
+    }
+
     public static int getHitCount() {
         return hitCount;
     }
 
     public static void setHitCount(int hitCount) {
         AbstractRobot.hitCount = hitCount;
-    }
-
-    public static int getPower() {
-        return power;
-    }
-
-    public static void setPower(int power) {
-        AbstractRobot.power = power;
-    }
-
-    public static int getHellspoint() {
-        return hellspoint;
-    }
-
-    public static void setHellspoint(int hellspoint) {
-        AbstractRobot.hellspoint = hellspoint;
     }
 
     @Override
@@ -149,7 +148,6 @@ abstract class AbstractRobot implements Attackable, Defensable, Power, Hellspoin
         } else if (hitCount == 4) {
             bodyPart = BodyPart.BODY;
         }
-
         return bodyPart;
     }
 
@@ -169,32 +167,4 @@ abstract class AbstractRobot implements Attackable, Defensable, Power, Hellspoin
         }
     }
 
-    public Power power() {
-        power = (int) (Math.random() * 4) + 1;
-        if (power == 1) {
-            return (Power) BodyPart.HAND;
-        } else if (power == 2) {
-            return (Power) BodyPart.LEG;
-        } else if (power == 3) {
-            return (Power) BodyPart.HAND;
-        } else if (power == 4) {
-            return (Power) BodyPart.BODY;
-        } else
-            throw new RuntimeException("UnexpectedPOWER exeption!");
-    }
-
-    @Override
-    public Hellspoint hellspoint() {
-        power = (int) (Math.random() * 4) + 1;
-        if (power == 1) {
-            return (Hellspoint) BodyPart.HAND;
-        } else if (power == 2) {
-            return (Hellspoint) BodyPart.LEG;
-        } else if (power == 3) {
-            return (Hellspoint) BodyPart.HAND;
-        } else if (power == 4) {
-            return (Hellspoint) BodyPart.BODY;
-        } else
-            throw new RuntimeException("UnexpectedHellspoint exeption!");
-    }
 }
