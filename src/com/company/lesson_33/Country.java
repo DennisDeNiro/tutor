@@ -1,4 +1,4 @@
-package com.company.Test_33;
+package com.company.lesson_33;
 
 public enum Country {
     RUSSIAN("Россия"),

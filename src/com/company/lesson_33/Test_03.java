@@ -1,4 +1,4 @@
-package com.company.Test_33;
+package com.company.lesson_33;
 
 /* Мосты
 1. Создать интерфейс Bridge с методом int getCarsCount().
@@ -11,7 +11,14 @@ package com.company.Test_33;
 */
 public class Test_03 {
     public static void main(String[] args) {
+        Bridge b = new WaterBridge();
+        Bridge b1 = new SuspensionBridge();
+        println(b);
+        println(b1);
+    }
 
+    public static void println(Bridge bridge) {
+        System.out.println(bridge.getCarsCount());
     }
 }
 
@@ -30,11 +37,5 @@ class SuspensionBridge implements Bridge {
     @Override
     public int getCarsCount() {
         return 30;
-    }
-}
-
-class Solution{
-    public Integer println(Bridge bridge){
-
     }
 }

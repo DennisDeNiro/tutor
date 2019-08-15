@@ -1,4 +1,4 @@
-package com.company.Test_33;
+package com.company.lesson_33;
 
 public class Test_01 {
     public static void main(String[] args) {
