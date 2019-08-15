@@ -20,8 +20,8 @@ import java.lang.ref.WeakReference;
 */
 public class Test_02 {
     public static void main(String[] args) {
-        Robot robot = new Robot("Vs",22,50);
-        Robot robot1 = new Robot("ss",33,43);
+        Robot robot = new Robot("Vs", 22, 50);
+        Robot robot1 = new Robot("ss", 33, 43);
 
         doMove(robot, robot1);
         doMove(robot1, robot);
@@ -35,7 +35,7 @@ public class Test_02 {
     public static void doMove(AbstractRobot robotFirst, AbstractRobot robotSecond) {
         System.out.println(String.format("%s атаковал робота %s, атакована %s, защищена %s, сил отнято %s, жизни робота %s"
                 , robotFirst.toString(), robotSecond.toString(), robotFirst.attack(), robotSecond.defense()
-                , robotSecond.hellspoint(), robotFirst.power()));
+        ));
 //        if (robotFirst.attack() == robotSecond.defense()) {
 //            System.out.println("урон не нанесен");
 //        } else {
@@ -43,83 +43,77 @@ public class Test_02 {
 //        }
 //        System.out.println("жизни робота " + robotFirst.power() + " = " + robotFirst.hellspoint() + " - " + robotSecond.hellspoint());
 //    }
-}
-
-class Robot extends AbstractRobot {
-    public Robot(String name, int power, int hellspoint) {
-        super(name, power, hellspoint);
     }
 }
+    class Robot extends AbstractRobot {
+        public Robot(String name, int power, int hellspoint) {
+            super(name, power, hellspoint);
+        }
+    }
 
-class BodyPart {
-    private String bodyPart;
+    class BodyPart {
+        private String bodyPart;
     public final static BodyPart HAND = new BodyPart("HAND");
     public final static BodyPart LEG = new BodyPart("LEG");
     public final static BodyPart HEAD = new BodyPart("HEAD");
     public final static BodyPart BODY = new BodyPart("BODY");
 
-    public BodyPart(String bodyPart) {
-        this.bodyPart = bodyPart;
+        public BodyPart(String bodyPart) {
+            this.bodyPart = bodyPart;
+        }
+
+
+        @Override
+        public String toString() {
+            return this.bodyPart;
+        }
     }
 
-    @Override
-    public String toString() {
-        return this.bodyPart;
+    interface Attackable {
+        BodyPart attack();
     }
-}
 
-interface Attackable {
-    BodyPart attack();
-}
+    interface Defensable {
+        BodyPart defense();
+    }
 
-interface Defensable {
-    BodyPart defense();
-}
 
-interface Power {
-    BodyPart power();
-}
-
-interface Hellspoint {
-    BodyPart hellspoint();
-}
-
-abstract class AbstractRobot implements Attackable, Defensable, Power, Hellspoint {
+    abstract class AbstractRobot implements Attackable, Defensable {
     private static int hitCount;
 
-    private String name;
-    private int power;
-    private int hellspoint;
+        private String name;
+        private int power;
+        private int hellspoint;
 
-    public AbstractRobot(String name, int power, int hellspoint) {
-        this.name = name;
-        this.power = power;
-        this.hellspoint = hellspoint;
-    }
+        public AbstractRobot(String name, int power, int hellspoint) {
+            this.name = name;
+            this.power = power;
+            this.hellspoint = hellspoint;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public String getName() {
+            return name;
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    public int getPower() {
-        return power;
-    }
+        public int getPower() {
+            return power;
+        }
 
-    public void setPower(int power) {
-        this.power = power;
-    }
+        public void setPower(int power) {
+            this.power = power;
+        }
 
-    public int getHellspoint() {
-        return hellspoint;
-    }
+        public int getHellspoint() {
+            return hellspoint;
+        }
 
-    public void setHellspoint(int hellspoint) {
-        this.hellspoint = hellspoint;
-    }
+        public void setHellspoint(int hellspoint) {
+            this.hellspoint = hellspoint;
+        }
 
     public static int getHitCount() {
         return hitCount;
@@ -129,42 +123,42 @@ abstract class AbstractRobot implements Attackable, Defensable, Power, Hellspoin
         AbstractRobot.hitCount = hitCount;
     }
 
-    @Override
-    public String toString() {
-        return this.name;
-    }
-
-    @Override
-    public BodyPart attack() {
-        hitCount = (int) (Math.random() * 4) + 1;
-
-        BodyPart bodyPart = null;
-        if (hitCount == 1) {
-            bodyPart = BodyPart.HAND;
-        } else if (hitCount == 2) {
-            bodyPart = BodyPart.LEG;
-        } else if (hitCount == 3) {
-            bodyPart = BodyPart.HEAD;
-        } else if (hitCount == 4) {
-            bodyPart = BodyPart.BODY;
+        @Override
+        public String toString() {
+            return this.name;
         }
-        return bodyPart;
-    }
 
-    @Override
-    public BodyPart defense() {
-        hitCount = (int) (Math.random() * 4) + 1;
-        if (hitCount == 1) {
-            return BodyPart.HAND;
-        } else if (hitCount == 2) {
-            return BodyPart.LEG;
-        } else if (hitCount == 3) {
-            return BodyPart.HEAD;
-        } else if (hitCount == 4) {
-            return BodyPart.BODY;
-        } else {
-            throw new RuntimeException("Unexpected exception!");
+        @Override
+        public BodyPart attack() {
+            hitCount = (int) (Math.random() * 4) + 1;
+
+            BodyPart bodyPart = null;
+            if (hitCount == 1) {
+                bodyPart = BodyPart.HAND;
+            } else if (hitCount == 2) {
+                bodyPart = BodyPart.LEG;
+            } else if (hitCount == 3) {
+                bodyPart = BodyPart.HEAD;
+            } else if (hitCount == 4) {
+                bodyPart = BodyPart.BODY;
+            }
+            return bodyPart;
+        }
+
+        @Override
+        public BodyPart defense() {
+            hitCount = (int) (Math.random() * 4) + 1;
+            if (hitCount == 1) {
+                return BodyPart.HAND;
+            } else if (hitCount == 2) {
+                return BodyPart.LEG;
+            } else if (hitCount == 3) {
+                return BodyPart.HEAD;
+            } else if (hitCount == 4) {
+                return BodyPart.BODY;
+            } else {
+                throw new RuntimeException("Unexpected exception!");
+            }
         }
     }
 
-}

@@ -1,5 +1,7 @@
 package com.company.lesson_32;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,23 +29,30 @@ public class Test_01 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String name;
-
-        while (true){
-
-            CatFactory.getCatByKey(null);
-            System.out.println();
+        while (true) {
+            String name = bf.readLine();
+            if (name.equals("")) {
+                break;
+            }
+            Cat cat = CatFactory.getCatByKey(name);
+            System.out.println(cat.toString());
         }
     }
 }
+
 class CatFactory {
-    public static Cat getCatByKey(String key){
-        Cat cur =new Cat("Dysia");
-        Cat male = new MaleCat("Murka");
-        Cat female = new FemaleCat("Linza");
-
-
-        return null;
+    static Cat getCatByKey(String type) {
+        Cat cat = null;
+        if (type.equals("cur")) {
+            cat = new Cat("Dysia");
+        } else if (type.equals("male")) {
+            cat = new MaleCat("Murka");
+        } else if (type.equals("female")) {
+            cat = new FemaleCat("Linza");
+        } else {
+            cat = new Cat(type);
+        }
+        return cat;
     }
 }
 
