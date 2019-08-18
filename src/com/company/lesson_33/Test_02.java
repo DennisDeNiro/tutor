@@ -40,7 +40,7 @@ public class Test_02 {
 
         System.out.println();
     }
-     public  class HenFactory{
+    class HenFactory{
         public String getHen(String country){
             if (Country.RUSSIAN.equals(getHen(country))){
                return "Это порода кур России";
