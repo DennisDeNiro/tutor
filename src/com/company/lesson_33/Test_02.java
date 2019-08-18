@@ -28,27 +28,51 @@ package com.company.lesson_33;
 */
 public class Test_02 {
     public static void main(String[] args) {
-        Hen hen = new RussianHen(Country.RUSSIAN.getCountry(),25);
+        Hen hen = new RussianHen(Country.RUSSIAN.getCountry(), 25);
         Hen hen1 = new UkrainianHen(Country.UKRAINE.getCountry(), 20);
         Hen hen2 = new MoldovanHen(Country.MOLDOVA.getCountry(), 15);
         Hen hen3 = new BelarusianHen(Country.BELARUSIA.getCountry(), 10);
 
+        System.out.println(hen.getDescription());
+        System.out.println(hen1.getDescription());
+        System.out.println(hen2.getDescription());
+        System.out.println(hen3.getDescription());
 
-        System.out.println(hen.getCountOfEggsPerMonth());
-        System.out.println(hen1.getCountOfEggsPerMonth());
-        System.out.println(hen2.getCountOfEggsPerMonth());
-        System.out.println(hen3.getCountOfEggsPerMonth());
+        System.out.println();
+    }
+     public  class HenFactory{
+        public String getHen(String country){
+            if (Country.RUSSIAN.equals(getHen(country))){
+               return "Это порода кур России";
+            }else if (Country.UKRAINE.equals(getHen(country))){
+                return "Это порода кур Украины";
+            }else if (Country.MOLDOVA.equals(getHen(country))){
+                return "Это порода кур Молдовы";
+            }else if (Country.BELARUSIA.equals(getHen(country))){
+                return "Это порода кур Беларусь";
+            }
+            return country;
+        }
+//           switch (Country.valueOf(country)){
+//               case RUSSIAN:
+//                   System.out.println("Это порода кур России");
+//               case UKRAINE:
+//                   System.out.println("Это порода кур Украины");
+//               case MOLDOVA:
+//                   System.out.println("Это порода кур Молдовы");
+//               case BELARUSIA:
+//                   System.out.println("Это порода кур Беларусь");
+//           }
+//           return country;
+//        }
     }
 }
-
-
-
 
 abstract class Hen {
     private String country;
     private int egg;
 
-    public abstract String getCountOfEggsPerMonth();
+    public abstract int getCountOfEggsPerMonth();
 
 
     public Hen(String country, int egg) {
@@ -59,7 +83,6 @@ abstract class Hen {
     public String getDescription() {
         return "Я курица.";
     }
-
 
     public String getCountry() {
         return country;
@@ -85,30 +108,36 @@ class RussianHen extends Hen {
     }
 
     @Override
-    public String getCountOfEggsPerMonth() {
-        return getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
+    public int getCountOfEggsPerMonth() {
+        return this.getEgg();
+    }
+
+    @Override
+    public int getEgg() {
+        return super.getEgg();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription();
+        return super.getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
     }
 }
 
 class UkrainianHen extends Hen {
 
+    @Override
+    public int getCountOfEggsPerMonth() {
+        return this.getEgg();
+    }
+
     public UkrainianHen(String country, int egg) {
         super(country, egg);
     }
 
-    @Override
-    public String getCountOfEggsPerMonth() {
-        return getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
-    }
 
     @Override
     public String getDescription() {
-        return super.getDescription();
+        return super.getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
     }
 }
 
@@ -119,13 +148,13 @@ class MoldovanHen extends Hen {
     }
 
     @Override
-    public String getCountOfEggsPerMonth() {
-        return getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
+    public int getCountOfEggsPerMonth() {
+        return this.getEgg();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription();
+        return super.getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
     }
 }
 
@@ -136,12 +165,12 @@ class BelarusianHen extends Hen {
     }
 
     @Override
-    public String getCountOfEggsPerMonth() {
-        return getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
+    public int getCountOfEggsPerMonth() {
+        return this.getEgg();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription();
+        return super.getDescription() + " Моя страна - " + getCountry() + ". Я несу " + getEgg() + " яиц в месяц.";
     }
 }
