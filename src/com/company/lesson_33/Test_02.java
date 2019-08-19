@@ -38,20 +38,28 @@ public class Test_02 {
         System.out.println(hen2.getDescription());
         System.out.println(hen3.getDescription());
 
-        System.out.println();
+        System.out.println(HenFactory.getHen(hen));
+        System.out.println(HenFactory.getHen(hen1));
+        System.out.println(HenFactory.getHen(hen2));
+        System.out.println(HenFactory.getHen(hen3));
+
+////        System.out.println(HenFactory.getHen("Украина"));
+////        System.out.println(HenFactory.getHen("Молдова"));
+////        System.out.println(HenFactory.getHen("Беларусиия"));
     }
-    class HenFactory{
-        public String getHen(String country){
-            if (Country.RUSSIAN.name().equals("Россия")){
-               return "Это порода кур России";
-            }else if (Country.UKRAINE.name().equals("Украина")){
-                return "Это порода кур Украины";
-            }else if (Country.MOLDOVA.name().equals("Молдова")){
-                return "Это порода кур Молдовы";
-            }else if (Country.BELARUSIA.name().equals("Беларусь")){
-                return "Это порода кур Беларусь";
-            }
-            return country;
+   public static class HenFactory{
+        public static String getHen(Hen country){
+            if (Country.RUSSIAN.getCountry().equals("Россия")){
+                return Country.RUSSIAN.getCountry();
+            }else if (Country.UKRAINE.getCountry().equals("Украина")){
+                return Country.UKRAINE.getCountry();
+            }else if (Country.MOLDOVA.getCountry().equals("Молдова")){
+                return Country.MOLDOVA.getCountry();
+            }else if (Country.BELARUSIA.getCountry().equals("Беларуссия")){
+                return Country.BELARUSIA.getCountry();
+            }else
+                return "This is no country";
+
         }
 //           switch (Country.valueOf(country)){
 //               case RUSSIAN:
