@@ -50,13 +50,13 @@ public class Test_02 {
    public static class HenFactory{
         public static String getHen(Hen country){
             if (Country.RUSSIAN.getCountry().equals("Россия")){
-                return Country.RUSSIAN.getCountry();
+                return country.getCountry();
             }else if (Country.UKRAINE.getCountry().equals("Украина")){
-                return Country.UKRAINE.getCountry();
+                return country.getCountry();
             }else if (Country.MOLDOVA.getCountry().equals("Молдова")){
-                return Country.MOLDOVA.getCountry();
+                return country.getCountry();
             }else if (Country.BELARUSIA.getCountry().equals("Беларуссия")){
-                return Country.BELARUSIA.getCountry();
+                return country.getCountry();
             }else
                 return "This is no country";
 
