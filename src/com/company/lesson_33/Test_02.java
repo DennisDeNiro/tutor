@@ -42,13 +42,13 @@ public class Test_02 {
     }
     class HenFactory{
         public String getHen(String country){
-            if (Country.RUSSIAN.equals(getHen(country))){
+            if (Country.RUSSIAN.name().equals("Россия")){
                return "Это порода кур России";
-            }else if (Country.UKRAINE.equals(getHen(country))){
+            }else if (Country.UKRAINE.name().equals("Украина")){
                 return "Это порода кур Украины";
-            }else if (Country.MOLDOVA.equals(getHen(country))){
+            }else if (Country.MOLDOVA.name().equals("Молдова")){
                 return "Это порода кур Молдовы";
-            }else if (Country.BELARUSIA.equals(getHen(country))){
+            }else if (Country.BELARUSIA.name().equals("Беларусь")){
                 return "Это порода кур Беларусь";
             }
             return country;
