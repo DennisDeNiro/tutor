@@ -4,7 +4,7 @@ public enum Country {
     RUSSIAN("Россия"),
     UKRAINE("Украина"),
     MOLDOVA("Молдова"),
-    BELARUSIA("Беларуссия");
+    BELARUSSIA("Беларуссия");
 
     private String country;
 

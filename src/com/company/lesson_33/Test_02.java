@@ -1,5 +1,7 @@
 package com.company.lesson_33;
 
+import static com.company.lesson_33.Country.*;
+
 /* Куриная фабрика
 Написать Фабрику(Factory) по производству кур(Hen)
 1. Создать класс Hen
@@ -28,39 +30,28 @@ package com.company.lesson_33;
 */
 public class Test_02 {
     public static void main(String[] args) {
-        Hen hen = new RussianHen(Country.RUSSIAN.getCountry(), 25);
-        Hen hen1 = new UkrainianHen(Country.UKRAINE.getCountry(), 20);
-        Hen hen2 = new MoldovanHen(Country.MOLDOVA.getCountry(), 15);
-        Hen hen3 = new BelarusianHen(Country.BELARUSIA.getCountry(), 10);
-
-        System.out.println(hen.getDescription());
-        System.out.println(hen1.getDescription());
-        System.out.println(hen2.getDescription());
-        System.out.println(hen3.getDescription());
-
-        System.out.println(HenFactory.getHen(hen));
-        System.out.println(HenFactory.getHen(hen1));
-        System.out.println(HenFactory.getHen(hen2));
-        System.out.println(HenFactory.getHen(hen3));
-
-////        System.out.println(HenFactory.getHen("Украина"));
-////        System.out.println(HenFactory.getHen("Молдова"));
-////        System.out.println(HenFactory.getHen("Беларусиия"));
+        System.out.println(HenFactory.getHen(RUSSIAN));
+        System.out.println(HenFactory.getHen(UKRAINE));
+        System.out.println(HenFactory.getHen(BELARUSSIA));
+        System.out.println(HenFactory.getHen(MOLDOVA));
     }
-   public static class HenFactory{
-        public static String getHen(Hen country){
-            if (Country.RUSSIAN.getCountry().equals("Россия")){
-                return country.getCountry();
-            }else if (Country.UKRAINE.getCountry().equals("Украина")){
-                return country.getCountry();
-            }else if (Country.MOLDOVA.getCountry().equals("Молдова")){
-                return country.getCountry();
-            }else if (Country.BELARUSIA.getCountry().equals("Беларуссия")){
-                return country.getCountry();
-            }else
-                return "This is no country";
 
+   public static class HenFactory{
+        public static Hen getHen(Country country){
+            switch (country) {
+                case RUSSIAN:
+                    return new RussianHen(RUSSIAN.getCountry(), 23);
+                case UKRAINE:
+                    return new UkrainianHen(UKRAINE.getCountry(), 20);
+                case MOLDOVA:
+                    return new MoldovanHen(MOLDOVA.getCountry(), 15);
+                case BELARUSSIA:
+                    return new BelarusianHen(BELARUSSIA.getCountry(), 10);
+                default:
+                    throw new IllegalArgumentException("Argument country is invalid");
+            }
         }
+
 //           switch (Country.valueOf(country)){
 //               case RUSSIAN:
 //                   System.out.println("Это порода кур России");
@@ -68,7 +59,7 @@ public class Test_02 {
 //                   System.out.println("Это порода кур Украины");
 //               case MOLDOVA:
 //                   System.out.println("Это порода кур Молдовы");
-//               case BELARUSIA:
+//               case BELARUSSIA:
 //                   System.out.println("Это порода кур Беларусь");
 //           }
 //           return country;
