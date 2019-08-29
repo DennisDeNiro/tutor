@@ -32,23 +32,25 @@ public class Test_01 {
         String key = null;
         while (true) {
             key = bf.readLine();
-            if (key.equals("user")) {
-                Person p = new Person.User();
-                doWork(p);
-            }
-            if (key.equals("looser")) {
-                Person p1 = new Person.Looser();
-                doWork(p1);
-            }
-            if (key.equals("coder")) {
-                Person p2 = new Person.Coder();
-                doWork(p2);
-            }
-            if (key.equals("proger")) {
-                Person p3 = new Person.Proger();
-                doWork(p3);
-            } else {
-                break;
+            switch (key) {
+                case "user":
+                    Person p = new Person.User();
+                    doWork(p);
+                    break;
+                case "looser":
+                    Person p1 = new Person.Looser();
+                    doWork(p1);
+                    break;
+                case "coder":
+                    Person p2 = new Person.Coder();
+                    doWork(p2);
+                    break;
+                case "proger":
+                    Person p3 = new Person.Proger();
+                    doWork(p3);
+                    break;
+                default:
+                    break ;
             }
         }
     }
