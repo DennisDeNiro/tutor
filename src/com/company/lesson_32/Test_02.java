@@ -19,7 +19,7 @@ import java.util.*;
 10
 Пример вывода:
 2
-8
+8L
 10
 */
 // TODO: 27.08.2019
@@ -49,7 +49,7 @@ public class Test_02 {
     private static void sort(List<Integer> list) {
         int[] array = new int[list.size()];
         for (int i = 0; i < list.size(); i++) array[i] = list.get(i);
-
+            
         for (int i = 0; i < array.length - 1; i++) {
             for (int k = 0; k < array.length - i - 1; k++) {
                 if (array[k] > array[k + 1]) {
