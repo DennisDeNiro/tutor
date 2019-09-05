@@ -30,13 +30,13 @@ public class Test_03 {
     public static void main(String[] args) {
         Hrivna money = new Hrivna(457);
         USD money1 = new USD(55);
-        List<Money>list = new ArrayList<>();
+        List<Money> list = new ArrayList<>();
         list.add(money);
         list.add(money1);
 
         Person person = new Person("Vasya", list);
-        for (int i=0; i<list.size();i++){
-           System.out.println(person.name + " имеет заначку в размере " + list.get(i).getAmount()+ list.get(i).getCurrencyName());
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(person.name + " имеет заначку в размере " + list.get(i).getAmount() + list.get(i).getCurrencyName());
         }
     }
 
@@ -69,7 +69,6 @@ public class Test_03 {
         public void setList(List<Money> list) {
             this.list = list;
         }
-
 
 
     }
