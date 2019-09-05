@@ -1,7 +1,6 @@
-package lesson_36;
+package com.company.lesson_36;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /* Валюты

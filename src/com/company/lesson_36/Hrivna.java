@@ -1,4 +1,4 @@
-package lesson_36;
+package com.company.lesson_36;
 
 public class Hrivna extends Money {
     public Hrivna(int getAmount) {

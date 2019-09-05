@@ -1,4 +1,4 @@
-package lesson_36;
+package com.company.lesson_36;
 
 public class USD extends Money {
     public USD(int getAmount) {

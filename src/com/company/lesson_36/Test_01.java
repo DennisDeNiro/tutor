@@ -1,4 +1,4 @@
-package lesson_36;
+package com.company.lesson_36;
 /* MovieFactory
 1. Добавить абстрактный класс Movie с абстрактным методом String getGenre().
 2. Добавить классы SoapOpera, Cartoon, Thriller и унаследовать их от Movie и реализовать метод String getGenre():

@@ -1,4 +1,4 @@
-package lesson_36;
+package com.company.lesson_36;
 
 /*
 1.1 Создать класс Constants с переменными:
