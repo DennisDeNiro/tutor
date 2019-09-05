@@ -1,4 +1,9 @@
 package lesson_36;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /* Валюты
 1. Создать абстрактный класс Money
 1.0 Реализуй метод getAmount в классе Money:
@@ -20,8 +25,70 @@ package lesson_36;
 9. В выполняющем методе создать объект с типом Person.
 10. Вывести на экран надпись типа - person.name + " имеет заначку в размере " + money.getAmount() + " " + money.getCurrencyName()
 */
+// TODO: 04.09.2019
 public class Test_03 {
     public static void main(String[] args) {
+        Hrivna money = new Hrivna(457);
+        USD money1 = new USD(55);
+        List<Money>list = new ArrayList<>();
+        list.add(money);
+        list.add(money1);
+
+        Person person = new Person("Vasya", list);
+        for (int i=0; i<list.size();i++){
+           System.out.println(person.name + " имеет заначку в размере " + list.get(i).getAmount()+ list.get(i).getCurrencyName());
+        }
+    }
+
+    static class Person {
+        private String name;
+        private List<Money> list = new ArrayList();
+
+
+        public Person(String name) {
+            this.name = name;
+        }
+
+        public Person(String name, List<Money> list) {
+            this.name = name;
+
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public List<Money> getList() {
+            return list;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setList(List<Money> list) {
+            this.list = list;
+        }
+
+
 
     }
 }
+
+abstract class Money {
+
+    private int getAmount;
+
+    public Money(int getAmount) {
+        this.getAmount = getAmount;
+    }
+
+    int getAmount() {
+        return getAmount;
+    }
+
+    public abstract String getCurrencyName();
+}
+
+
+

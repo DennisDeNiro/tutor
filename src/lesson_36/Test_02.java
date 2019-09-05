@@ -22,9 +22,14 @@ String LANOS_NAME = "Ланосе";
 public class Test_02 {
     public static void main(String[] args) {
         Ferrari f = new Ferrari();
-        f.printlnDesire();
         Lanos l = new Lanos();
-        l.printlnDesire();
+        CheapCar c = new CheapCar();
+        LuxuriousCar lux = new LuxuriousCar();
+        System.out.println(f.printlnDesire());
+        System.out.println(l.printlnDesire());
+        System.out.println(c.printlnDesire());
+        System.out.println(lux.printlnDesire());
+
     }
 }
 
@@ -36,28 +41,28 @@ interface Constants {
     String LANOS_NAME = "Ланосе";
 }
 
-class Ferrari{
-    String printlnDesire() {
-        return "Я хочу ездить на Феррари";
+class Ferrari extends LuxuriousCar{
+    protected String printlnDesire() {
+        return Constants.WANT_STRING+Constants.FERRARY_NAME;
     }
 }
 
-class Lanos  {
-    String printlnDesire() {
-        return "Я хочу ездить на Ланосе";
+class Lanos extends CheapCar {
+   protected String printlnDesire() {
+        return Constants.WANT_STRING+Constants.LANOS_NAME;
     }
 }
 
 class LuxuriousCar  {
 
     String printlnDesire() {
-        return "Я хочу ездить на роскошной машине";
+        return Constants.WANT_STRING+Constants.LUXURIOUS_CAR;
     }
 }
 
 class CheapCar {
 
     String printlnDesire() {
-        return "Я хочу ездить на дешевой машине";
+        return Constants.WANT_STRING+Constants.CHEAP_CAR;
     }
 }
