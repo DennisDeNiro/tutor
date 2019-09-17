@@ -34,8 +34,8 @@ public class Test_03 {
         list.add(money1);
 
         Person person = new Person("Vasya", list);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(person.name + " имеет заначку в размере " + list.get(i).getAmount() + list.get(i).getCurrencyName());
+        for (int i = 0; i < person.getList().size(); i++) {
+            System.out.println(person.name + " имеет заначку в размере " + person.getList().get(i).getAmount() + person.getList().get(i).getCurrencyName());
         }
     }
 
