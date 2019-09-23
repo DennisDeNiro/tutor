@@ -13,12 +13,41 @@ package com.company.lesson_39;
 2.4. иначе, вызвать метод print для String.
 */
 
-public class Test_02 {
-    public static void main(String[] args) {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
+public class Test_02 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        String s = null;
+        while (true) {
+            s = bf.readLine();
+            if (s.equals("exit")) {
+                break;
+            } else if (s.equals(".")) {
+               print(Double.parseDouble(s));
+            }else if(Integer.parseInt(s)>0 && Integer.parseInt(s)<128){
+                print(Short.parseShort(s));
+            }else if (Integer.parseInt(s)>128 && Integer.parseInt(s)==128){
+                print(Integer.parseInt(s));
+            }
+        }
     }
 
-    public void print(){
+    public static void print(Double value) {
+        System.out.println("Это тип Double, значение " + value);
+    }
 
+    public static void print(String value) {
+        System.out.println("Это тип String, значение " + value);
+    }
+
+    public static void print(short value) {
+        System.out.println("Это тип short, значение " + value);
+    }
+
+    public static void print(Integer value) {
+        System.out.println("Это тип Integer, значение " + value);
     }
 }
