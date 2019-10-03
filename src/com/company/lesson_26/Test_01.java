@@ -16,7 +16,7 @@ import java.util.Map;
 Вывести содержимое словаря на экран.
 В тестах регистр (большая/маленькая буква) влияет на результат.
 */
-// TODO: 11.07.2019
+
 //вариант count
 public class Test_01 {
     public static void main(String[] args) throws IOException {

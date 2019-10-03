@@ -1,5 +1,8 @@
 package com.company.lesson_37;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /* ООП - книги
 1. Создать абстрактный класс Book с приватным параметром author.
 1.2 Создать абстрактный метод Book getBook().
@@ -20,14 +23,22 @@ package com.company.lesson_37;
 - Hercule Poirot - автор Agatha Christie
 Вывести список на экран
 */
+// TODO: 01.10.2019
 public class Test_01 {
     public static void main(String[] args) {
+        List<Book> list = new ArrayList<>();
+//        list.add(Tom Sawer);
 
     }
+
 }
 
 abstract class Book {
     private String author;
+
+    public Book(String author) {
+        this.author = author;
+    }
 
     abstract Book getBook();
 
@@ -44,7 +55,36 @@ abstract class Book {
         return getOutputByBookType();
     }
 }
+class MarkTwainBook extends Book{
 
-//public static class MarkTwainBook extends Book {
-//
-//}
+    public MarkTwainBook(String author) {
+        super(author);
+    }
+
+    @Override
+    Book getBook() {
+        return null;
+    }
+
+    @Override
+    String getName() {
+        return null;
+    }
+}
+
+class AgathaChristieBook extends Book{
+
+    public AgathaChristieBook(String author) {
+        super(author);
+    }
+
+    @Override
+    Book getBook() {
+        return null;
+    }
+
+    @Override
+    String getName() {
+        return null;
+    }
+}

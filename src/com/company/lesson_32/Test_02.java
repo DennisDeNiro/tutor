@@ -22,7 +22,7 @@ import java.util.*;
 8L
 10
 */
-// TODO: 27.08.2019
+
 public class Test_02 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
