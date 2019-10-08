@@ -26,9 +26,10 @@ import java.util.List;
 // TODO: 01.10.2019
 public class Test_01 {
     public static void main(String[] args) {
-        List<Book> list = new ArrayList<>();
-//        list.add(Tom Sawer);
-
+        List<String> list = new ArrayList<>();
+        list.add("Tom Sawer");
+        list.add("Hercule Poirot");
+        System.out.println(list.toString());
     }
 
 }
@@ -47,7 +48,13 @@ abstract class Book {
     public String getOutputByBookType() {
          String agathaChristieOutput = author + ", " + getBook().getName() + " is a detective";
          String markTwainOutput = getBook().getName() + " book was written by " + author;
-        return getOutputByBookType();
+
+
+        if (author.equals("Hercule Poirot")){
+            return agathaChristieOutput;
+        }else{
+            return markTwainOutput;
+        }
     }
 
     @Override
@@ -57,34 +64,40 @@ abstract class Book {
 }
 class MarkTwainBook extends Book{
 
-    public MarkTwainBook(String author) {
-        super(author);
+    public String bookName;
+
+    public MarkTwainBook(String author, String bookName) {
+        super("Tom Sawyer");
+        this.bookName = bookName;
     }
 
     @Override
-    Book getBook() {
-        return null;
+    public Book getBook() {
+        return this.getBook();
     }
 
     @Override
     String getName() {
-        return null;
+        return this.bookName;
     }
 }
 
 class AgathaChristieBook extends Book{
 
-    public AgathaChristieBook(String author) {
-        super(author);
+    public String bookName;
+
+    public AgathaChristieBook(String author, String bookName) {
+        super("Hercule Poirot");
+        this.bookName = bookName;
     }
 
     @Override
-    Book getBook() {
-        return null;
+    public Book getBook() {
+        return this.getBook();
     }
 
     @Override
     String getName() {
-        return null;
+        return this.bookName;
     }
 }
