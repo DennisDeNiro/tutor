@@ -17,7 +17,7 @@ package com.company.lesson_10;
     Stack -> primitives, local verb, obj ref   a, b=34
     Stack -> primitives, local verb, obj ref   a, b=34
     Stack -> primitives, local verb, obj ref   a, b=34
-    Heap -> objects  new Test_02 [[YG][OG]]  YG[[ES][SS]]  SS[[s1][s2]]
+    Heap -> objects  new Test_02a [[YG][OG]]  YG[[ES][SS]]  SS[[s1][s2]]
     Garbage collector
 */
 

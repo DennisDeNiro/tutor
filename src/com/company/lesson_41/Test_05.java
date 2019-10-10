@@ -52,7 +52,7 @@ public class Test_05 {
             Date startPlaying = startPlaying();
             sleepNSeconds(1);
             Date stopPlaying = stopPlaying();
-            long time = startPlaying.getTime() - stopPlaying.getTime();;
+            long time =  stopPlaying.getTime() - startPlaying.getTime();;
             System.out.println(String.format("Playing %d ms", time));
         }
 
