@@ -1,6 +1,6 @@
 package com.company.lesson_42;
 
-import static com.company.lesson_42.Test_02b.Cat.initAllKitten;
+
 
 /* Расставь вызовы методов join()
 1. В выполняющем классе создать метод investigateWorld(), который должен погружать нить в сон на 200 мс
@@ -29,10 +29,9 @@ import static com.company.lesson_42.Test_02b.Cat.initAllKitten;
 */
 public class Test_02b {
     public static void main(String[] args) throws InterruptedException {
-        Cat thread = new Cat("Liza");
-        Cat thread2 = new Cat("Lora");
+        Cat thread = new Cat("Dysia");
+        Cat thread2 = new Cat("Murka");
         thread.start();
-        thread.join();
         thread2.start();
     }
 
@@ -50,12 +49,9 @@ public class Test_02b {
 
         @Override
         public void run() {
-            System.out.println(getName() + " родила 2 котенка");
-            initAllKitten();
-            System.out.println(": Все котята в корзинке. " + getName() + " собрала их назад");
+            System.out.println(getName() + getName() + ", вылез из корзинки");
             try {
                 investigateWorld();
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -63,30 +59,32 @@ public class Test_02b {
     }
 
     public static class Cat extends Thread {
-        static Kitten kitten = new Kitten("dysia");
-        static Kitten kitten2 = new Kitten("murka");
+        Kitten kitten = new Kitten("Котенок 1, мама - " + getName() );
+        Kitten kitten2 = new Kitten("Котенок 2, мама - " + getName() );
 
         private String name;
 
         public Cat(String name) {
-            this.kitten = kitten;
-            this.kitten2 = kitten2;
-            this.name = name;
+            super(name);
         }
 
-        public Kitten getKitten() {
-            System.out.println("Котенок 1, мама - " + getName());
-            return kitten;
-        }
 
-        public Kitten getKitten2() {
-            System.out.println("Котенок 2, мама - " + getName());
-            return kitten2;
-        }
-
-        public static void initAllKitten(){
+        public void initAllKitten() throws InterruptedException {
           kitten.start();
+          kitten.join();
           kitten2.start();
+          kitten2.join();
+        }
+
+        @Override
+        public void run() {
+            System.out.println(getName() + " родила 2 котенка");
+            try {
+                initAllKitten();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(getName() + ": Все котята в корзинке. " + getName() + " собрала их назад");
         }
     }
 }
