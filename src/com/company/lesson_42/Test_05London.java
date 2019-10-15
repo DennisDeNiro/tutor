@@ -26,7 +26,7 @@ public class Test_05London {
     static boolean isStopped = false;
 
     public static void main(String[] args) throws InterruptedException {
-        Clock clock = new Clock("Лондон", 23, 59, 59);
+        Clock clock = new Clock("Лондон", 23, 59, 57);
         Thread.sleep(4000);
         isStopped = true;
         Thread.sleep(1000);
@@ -67,8 +67,6 @@ public class Test_05London {
                 System.out.println(String.format("в г.%s сейчас  %d:%d:%d", cityName, hours, minutes, seconds));
             }
         }
-
-
         @Override
         public void run() {
             while (!isStopped) {
